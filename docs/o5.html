@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Atracții turistice în Europa</title>
-
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -31,6 +42,10 @@
                         <div class="container">
                             <nav>
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -57,12 +72,12 @@
                 </div>
             </div>
         </header>
-        <section class="fullscreen background-overlay" data-bg-video="video/hagia.mp4">
+        <section class="fullscreen background-overlay" data-bg-video="video/colosseum.mp4">
             <div class="container-fluid">
                 <div class="container-fullscreen">
                     <div class="text-middle text-center text-light">
-                        <h1 class="text-lg">Hagia Sofia</h1>
-                        <p class="lead">Cea mai frumoasă moschee din Istanbul</p>
+                        <h1 class="text-lg">Colosseum</h1>
+                        <p class="lead">Cel mai reprezentativ obiectiv turistic din Roma</p>
                         
                     </div>
                 </div>
@@ -75,19 +90,24 @@
                 <div class="row m-b-40">
                     <div class="col-lg-10 center">
                         <div class="project-description text-center">
-                            <h2>Hagia Sofia</h2>
+                            <h2>Colosseum</h2>
 
-                            <p class="text-justify">Hagia Sofia a fost initial o biserica crestin ortodoxa fiind transformata intr-o moschee in anul 1453 de turci si apoi intr-un muzeu in anul 1935. Este considerata una din cele mai grandioase cladiri din istorie. Cucerirea ei de otomani la caderea Constantinopolului este considerata una din cele mai mari tragedii ale crestinitatii de credinta ortodoxa greaca. </p>
+                            <p class="text-justify">Colosseum-ul este una dintre cele șapte minuni ale lumii antice, fiind un monument vizitat de mii de turiști în fiecare zi și care este recunoscut pentru multitudinea de mituri și legende pe care le ascunde. Denumirea sa reală este cea de Amfiteatrul Flavian, acest monument fiind construit la cererea împăratului Vespasian și ulterior inaugurat de succesorul său Titus, ambii făcând parte din dinastia Flavi. </p>
 
-                            <p class="text-justify">Numele ei provine din greaca si inseamna "Biserica intelepciunii sfinte a lui Dumnezeu". De asemenea este cunoscuta si ca "Sancta Sofia" in latina sau "Ayasofya" in turca. Sofia nu este un nume de sfant ci in greaca inseamna "intelepciune". </p>
 
-                            <p class="text-justify">Hagia Sofia este acoperita de un dom cu diametrul de 31 de metri avand o inaltime de 56 de metri (un pic mai mic ca cel care acopera Panteonul din Roma). Domul este sprijinit pe pandantive (4 sectiuni triunghiulare concave) care rezolva problema sprijinirii bazei circulare a domului pe o baza rectangulara. La Hagia Sofia greutatea domului este mentinuta si de patru piloni masivi situati in colturi. </p>
+                            <p class="text-justify">În vremurile vechi, acest amfiteatru era utilizat ca arenă pentru gladiatori și pentru alte evenimente publice sau spectacole de teatru și diverse expediții de vânătoare. Titulatura Colosseum a devenit cunoscută în Evul Mediu, datorită asemănării sale cu o statuie imensă, cu structură impozantă, care-l înfățișa pe Nero. </p>
 
-                            <p class="text-justify">La capatul de vest (intrarea) si de est, deschiderile arcelor se continua cu jumatati de domuri sustinute in pendentive mai mici. Desi ierarhia domurilor a fost construita pentru a crea un spatiu mai mare in interior, aceasta arhitectura este de neexplicat in antichitate. Toate suprafetele din interior sunt invelite cu marmura policroma, verde si alba cu porfir mov si mozaicuri aurii. La exterior, peretii simpli din ghips dezvaluie claritatea boltei si a domului. </p>
+                            <p class="text-justify">În vremea creștinismului acest monument a fost considerat un simbol păgân și în această perioadă au început să apară cele mai multe legende și mituri despre celebrul monument. Multe dintre acestea au fost răspândite de creștini, care îl considerau un loc al pierzaniei și al lăcomiei. </p>
 
-                            <p class="text-justify">Nu a ramas nimic din biserica care a fost construita initial pe acelasi loc in sec IV. Dupa demolarea primei biserici, a fost construita cea de-a doua biserica de Constantin al II-lea, fiul lui Constantin cel Mare care a ars in timpul rascoalei din anul 532. Cladirea a fost reconstruita sub supravegherea personala a Imparatuui Iustinian I dar in timpul cutremurului din anul 989 s-a daramat. Dupa cutremur, guvernul bizantin a ales ca arhitect pentru noua biserica pe Tirdat, creatorul maretelor biserici Ani si Agine. </p>
+                            <p class="text-justify">Iată care sunt principalele legende și curiozități despre celebrul monument din Roma. </p>
 
-                            <p class="text-justify">Hagia Sofia este unul din cele mai importante exemple de arhitectura bizantina care a supravietuit. Templul, in sine, era asa bogat si atat de decorat artistic incat Iustinian a spus "Solomon, mi-ai depasit orice inchipuire". Iustinian a verificat ca era cea mai mare catedrala construita vreodata in acele vremuri, ea ramanand cea mai mare catedrala timp de 1.000 de ani pana la terminarea Catedralei din Sevilia. </p>
+                            <p class="text-justify">În vremurile medievale Colosseum-ul era considerat una dintre cele șapte uși de acces în Iad, din cauza numeroaselor lupte purtate de gladiatori în arena sa. Legenda spune că, la finalul fiecărei lupte, Charon, o figură misterioasă, apărea pentru a transporta sufletele celor decedați în lumea de dincolo. Conform legendei, luntrașul utiliza fier roșu pentru a verifica dacă gladiatorii au decedat. </p>
+
+                            <p class="text-justify">O altă legendă despre celebrul Colosseum susține faptul că sufletele gladiatorilor decedați în timpul luptelor rămâneau blocate între lumi, în interiorul celebrului monument din Roma. Chiar și acum există încă persoane care susțin mitul conform căruia vechiul Amfiteatru Flavian este o locație în interiorul căreia fantomele se plimbă, târând lanțuri grele și zgomotoase. </p>
+
+                            <p class="text-justify">Conform legendelor medievale, un celebru poet din acele vremuri, Virgil, îndeplinea diverse ritualuri magice în interiorul celebrului Colosseum. Se credea, de asemenea, faptul că în secolul al XV-lea vrăjitorii se întâlneau în interiorul clădirii impozante pentru a pregăti poțiuni magice, realizate din ierburi care creșteau doar acolo. </p>
+
+                            <p class="text-justify">De-a lungul timpului, au fost descoperite diverse plante de origine non-indigenă, despre care se crede că sunt cele care au fost utilizate și care au pus bazele legendelor legate de ritualurile de magie care aveau loc în interiorul Amfiteatrului Flavian. </p>
 
                         </div>
                     </div>
@@ -98,40 +118,40 @@
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/45.jpg" alt=""></a>
+                                    <a href="#"><img src="images/29.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/45.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/29.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/46.jpg" alt=""></a>
+                                    <a href="#"><img src="images/30.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/46.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/30.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/47.jpg" alt=""></a>
+                                    <a href="#"><img src="images/31.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/47.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/31.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/48.jpg" alt=""></a>
+                                    <a href="#"><img src="images/32.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/48.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/32.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
@@ -197,6 +217,7 @@
     <script src="plugins/youtube-player/jquery.mb.YTPlayer.min.js"></script>
 
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
 </body>
 
 </html>

@@ -5,15 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Atracții turistice în Europa</title>
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4J2QKFKKF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-M4J2QKFKKF');
+    </script>
+
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+
+    <!--    <link href="css/newfutre.css" rel="stylesheet"> -->
 
     <link href="http://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet" property="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" type="text/css" href="plugins/slider-revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
     <link rel="stylesheet" type="text/css" href="plugins/slider-revolution/fonts/font-awesome/css/font-awesome.css">
 
     <link rel="stylesheet" type="text/css" href="plugins/slider-revolution/css/settings.css">
+
+
     <style type="text/css">
         .tp-gradientstyle {
             background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.83) 99%, rgba(0, 0, 0, 0.75) 100%);
@@ -148,28 +174,27 @@
 </head>
 
 <body>
-
     <div class="body-inner">
-
-        <header id="header" data-fullwidth="true">
+        <header id="header" data-fullwidth="true" class="manipagi" data-transparent="false">
             <div class="header-inner">
                 <div class="container">
-
                     <div id="logo">
                         <a href="index.html">
                             <span class="logo-default">Atracții turistice în Europa</span>
                             <span class="logo-dark">Atracții turistice în Europa</span>
                         </a>
                     </div>
-
                     <div id="mainMenu-trigger">
                         <a class="lines-button x"><span class="lines"></span></a>
                     </div>
-
                     <div id="mainMenu">
                         <div class="container">
-                            <nav>
+                            <nav>   
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -448,6 +473,7 @@
     <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
     <script src="js/plugins.js"></script>
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
 </body>
 
 </html>

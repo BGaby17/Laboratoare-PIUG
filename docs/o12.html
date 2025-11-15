@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Atracții turistice în Europa</title>
-
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -31,6 +42,10 @@
                         <div class="container">
                             <nav>
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -57,14 +72,12 @@
                 </div>
             </div>
         </header>
-        <!-- end: Header -->
-        <!--Background Video -->
-        <section class="fullscreen background-overlay" data-bg-video="video/sagrada.mp4">
+        <section class="fullscreen background-overlay" data-bg-video="video/lofoten.mp4">
             <div class="container-fluid">
                 <div class="container-fullscreen">
                     <div class="text-middle text-center text-light">
-                        <h1 class="text-lg">Sagrada Familia</h1>
-                        <p class="lead">Cea mai de seama opera a lui Antoni Gaudí</p>
+                        <h1 class="text-lg">Fiordurile norvegiene</h1>
+                        <p class="lead">Peisaje de basm în nordul Europei</p>
                         
                     </div>
                 </div>
@@ -77,19 +90,25 @@
                 <div class="row m-b-40">
                     <div class="col-lg-10 center">
                         <div class="project-description text-center">
-                            <h2>Sagrada Familia</h2>
+                            <h2>Fiordurile norvegiene</h2>
 
-                            <p>Este una dintre cele mai impresionante biserici din lume și cel mai vizitat obiectiv din Barcelona. La Sagrada Familia, capodopera arhitectului catalan Antonio Gaudi, se află încă în construcție deși proiectul a fost inițiat acum mai bine de 100 de ani, în 1882.</p>
+                            <p class="text-justify">Norvegia a fost ani la rând prima în topul celor mai fericite nații din lume. Poate nu doar nivelul de trai este  de „vină” și peisajele ajută mult. O zi cu trenul și cu vaporul prin fiordurile spectaculoase. Fiordurile norvegiene – văi adânci, abrupte, în formă de U, săpate în stâncă de ghețari – s-au format acum circa trei milioane de ani. Pe toată coasta de vest a Norvegiei, sute de golfuri șerpuitoare și adesea înguste leagă Marea Norvegiei de continent. </p>
 
-                            <p>Oficial, La Sagrada Familia ar trebui terminată în anul 2026, când se împlinesc 100 de ani de la moartea lui Antonio Gaudi. Arhitectul catalan a supervizat construcția basilicii timp de 40 de ani, însă la data morții sale doar unul singur dintre turnurile basilicii fusese ridicat. Din 1926, proiectul a fost continuat după planurile arhitectului. </p>
+                            <p class="text-justify">Cel mai impresionant traseu trece prin fiordul Sogne, „regele fiordurilor”, cel mai lung din țară, având 204 kilometri lungime și 1.309 metri adâncime. Mica ambarcațiune de croazieră înaintează pufăind prin dârele formate pe suprafața apei, la umbra țărmurilor abrupte și a pădurilor de pin, prin care nu pătrunde nici o rază de lumină. </p>
 
-                            <p>În 1936, în timpul Războiului Civil Spaniol, basilica a fost atacată, iar atelierul în care erau păstrate schițele și planurile realizate de Gaudi a fost distrus. Acestea au fost reconstituite din alte surse, dar dispariția originalelor a iscat controverse, căci mulți susțin acum că Sagrada Familia, atunci când va fi terminată, nu va arăta așa cum și-ar fi dorit creatorul ei.</p>
+                            <p class="text-justify">Cascadele se prăvălesc peste stânci aproape verticale, iar pe malul apei își fac apariția satele, care par pictate pe o carte poștală, cu tradiționalele lor case roșii din lemn și cu turlele albe ale bisericilor. Scăldate vara de lumina orbitoare a soarelui și biciuite iarna de ploi năprasnice, fiordurile sunt de o frumusețe sălbatică, iar măreția lor vă înfioară. </p>
 
-                            <p>Gaudi a glumit odată spunând că Dumnezeul, clientul său, nu se grăbește să-și vadă basilica terminată. Arhitectul, care și-a dedicat peste patru decenii din viață acestui proiect, credea că Sagrada Familia este misiunea sa divină. Gaudi a murit la vârsta de 74 de ani în 1926 în urma unui accident – a fost lovit de un tramvai. Îmbrăcat în haine sărace și fără documente, Gaudi nu a fost recunoscut, ci luat drept un cerșetor, și nu i s-au acordat îngrijiri medicale imediate. A murit la trei zile după accident și a fost înmormântat în cripta basilicii sale. </p>
+                            <p class="text-justify">Pentru a ajunge pe coastă, luați trenul spre Myrdal de pe linia Oslo-Bergen, apoi înspre Flåm, o capodoperă inginerească de tunele deschise care se strecoară pe pante aparent inaccesibile. Călătoria durează o oră și vă oferă una dintre cele mai frumoase priveliști din lume. </p>
 
-                            <p>La Sagrada Familia are opt turnuri acum, însă la finalul proiectul basilica va avea 18 turle, dintre care cea mai înaltă va avea 170 de metri înălțime. Cele 12 turle mici simbolizează apostolii lui Iisus, patru dintre ele îi reprezintă pe autorii Evangheliilor, iar cele două turle mari îi reprezintă pe Iisus și Fecioara Maria.</p>
+                            <p class="text-justify">Perioada optimă de vizitare a acestor locuri fantastice sunt lunile de vară, mai-septembrie. Acestea sunt adesea însorite și constituie vârful sezonului, lunile de iarnă, lungi și întunecate, vă garantează o experiență furtunoasă și o atmosferă inedită. </p>
 
-                            <p>Gaudi a fost întrebat odată de ce depune atâta efort și timp în realizarea unor turle atât de elaborate din moment ce nimeni nu le va putea admira de sus. Arhitectul a răspuns că „Îngerii le vor vedea.”</p>
+                            <p class="text-justify">La Naeroyfjord, cel mai îngust dintre fiorduri, puteți vedea unul dintre cele mai frumoase peisaje din nordul Europei. Apele albastre sunt în puternic contrast cu pinii verzi, iar munții acoperiți de zăpadă se înalță amenințători deasupra tuturor. </p>
+
+                            <p class="text-justify">Cu puțin noroc, s-ar putea să vedeți foci încălzindu-se la soare pe malul apei. Pentru cei plini de energie, sătucul Flåm („cătun între munți abrupți”) este locul ideal din care puteți pleca într-o excursie cu caiacul în apele fiordului. </p>
+
+                            <p class="text-justify">Bergen, al doilea oraș ca mărime din Norvegia, este o localitate cu clădiri medievale din lemn, care s-au păstrat foarte bine și  pe care le puteți vedea mai ales în jurul portului Bryggen, inclus în Patrimoniul Mondial UNESCO. </p>
+
+                            <p class="text-justify">Trolltunga este o destinaţie căutată de amatorii de senzaţii tari, dornici să se fotografieze pe marginea prăpastiei, la 1.100 de metri altitudine. În ultima eră glaciară, o parte din munte a îngheţat, s-a rupt şi a lăsat o bucată de stâncă plutind ameninţător la 700 de metri deasupra lacului Ringedalsvatnet din Skjeggedal, în Norvegia. </p>
                         </div>
                     </div>
                 </div>
@@ -99,40 +118,40 @@
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/21.jpg" alt=""></a>
+                                    <a href="#"><img src="images/56.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/21.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/56.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/22.jpg" alt=""></a>
+                                    <a href="#"><img src="images/57.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/22.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/57.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/23.jpg" alt=""></a>
+                                    <a href="#"><img src="images/58.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/23.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/58.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/24.jpg" alt=""></a>
+                                    <a href="#"><img src="images/59.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/24.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/59.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
@@ -198,6 +217,7 @@
     <script src="plugins/youtube-player/jquery.mb.YTPlayer.min.js"></script>
 
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
 </body>
 
 </html>

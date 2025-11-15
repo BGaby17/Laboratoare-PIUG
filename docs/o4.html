@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Atracții turistice în Europa</title>
-
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -31,6 +42,10 @@
                         <div class="container">
                             <nav>
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -199,6 +214,7 @@
     <script src="plugins/youtube-player/jquery.mb.YTPlayer.min.js"></script>
 
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
 </body>
 
 </html>

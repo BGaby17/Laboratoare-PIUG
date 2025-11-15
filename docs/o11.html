@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Atracții turistice în Europa</title>
-
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -31,6 +42,10 @@
                         <div class="container">
                             <nav>
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -57,12 +72,12 @@
                 </div>
             </div>
         </header>
-        <section class="fullscreen background-overlay" data-bg-video="video/colosseum.mp4">
+        <section class="fullscreen background-overlay" data-bg-video="video/red.mp4">
             <div class="container-fluid">
                 <div class="container-fullscreen">
                     <div class="text-middle text-center text-light">
-                        <h1 class="text-lg">Colosseum</h1>
-                        <p class="lead">Cel mai reprezentativ obiectiv turistic din Roma</p>
+                        <h1 class="text-lg">Catedrala Sfântul Vasile</h1>
+                        <p class="lead">Simbolul Moscovei</p>
                         
                     </div>
                 </div>
@@ -75,25 +90,27 @@
                 <div class="row m-b-40">
                     <div class="col-lg-10 center">
                         <div class="project-description text-center">
-                            <h2>Colosseum</h2>
-
-                            <p class="text-justify">Colosseum-ul este una dintre cele șapte minuni ale lumii antice, fiind un monument vizitat de mii de turiști în fiecare zi și care este recunoscut pentru multitudinea de mituri și legende pe care le ascunde. Denumirea sa reală este cea de Amfiteatrul Flavian, acest monument fiind construit la cererea împăratului Vespasian și ulterior inaugurat de succesorul său Titus, ambii făcând parte din dinastia Flavi. </p>
+                            <h2>Catedrala Sfântul Vasile</h2>
 
 
-                            <p class="text-justify">În vremurile vechi, acest amfiteatru era utilizat ca arenă pentru gladiatori și pentru alte evenimente publice sau spectacole de teatru și diverse expediții de vânătoare. Titulatura Colosseum a devenit cunoscută în Evul Mediu, datorită asemănării sale cu o statuie imensă, cu structură impozantă, care-l înfățișa pe Nero. </p>
 
-                            <p class="text-justify">În vremea creștinismului acest monument a fost considerat un simbol păgân și în această perioadă au început să apară cele mai multe legende și mituri despre celebrul monument. Multe dintre acestea au fost răspândite de creștini, care îl considerau un loc al pierzaniei și al lăcomiei. </p>
+                            <p class="text-justify"> Catedrala Sfantul Vasile din Moscova – sunt putine cuvinte cu care o poti descrie : culorile sunt superbe, iar arhitectura este unica in lume, o adevarata comoara a rusilor cu care se mandresc enorm. Daca ajungeti vreodata la Moscova, Piata Rosie este primul lucru pe care trebuie sa il vizitati, anume acolo veti descoperi stilul autohton si veti gusta cu adevarat din cultura si spiritul rusesc.</p>
 
-                            <p class="text-justify">Iată care sunt principalele legende și curiozități despre celebrul monument din Roma. </p>
+                            <p class="text-justify">Probabil fiecare dintre noi a vazut macar odata fotografiile cu aceasta Catdrala vestita, mai ales alaturi de articifii sau oameni ce se distreaza. Ei bine, s-a demonstrat ca prin Piata Rosie trec zilnic mii de curiosi, turisti recent ajunsi la Moscova, dar si localnici admiratori de arta, admiratori de frumos sau pur si simplu patrioti.</p>
 
-                            <p class="text-justify">În vremurile medievale Colosseum-ul era considerat una dintre cele șapte uși de acces în Iad, din cauza numeroaselor lupte purtate de gladiatori în arena sa. Legenda spune că, la finalul fiecărei lupte, Charon, o figură misterioasă, apărea pentru a transporta sufletele celor decedați în lumea de dincolo. Conform legendei, luntrașul utiliza fier roșu pentru a verifica dacă gladiatorii au decedat. </p>
+                            <p class="text-justify">Carisma si atractia generata de Catedrala se datoareaza intr-o oarecare masura si speculatiilor, controverselor ce au aparut pe parcursul ultimelor 5 secole, intrucat oamenilor le plac povestile incitante si intrigante, iar asa creste si popularitatea edificiului.</p>
 
-                            <p class="text-justify">O altă legendă despre celebrul Colosseum susține faptul că sufletele gladiatorilor decedați în timpul luptelor rămâneau blocate între lumi, în interiorul celebrului monument din Roma. Chiar și acum există încă persoane care susțin mitul conform căruia vechiul Amfiteatru Flavian este o locație în interiorul căreia fantomele se plimbă, târând lanțuri grele și zgomotoase. </p>
+                            <p class="text-justify">Toti cei care au vizitat Piata Rosie nu au ezitat sa faca o fotografie, intrucat cromatica si in general atmosfera colorata, dar cu spirit strict si dur a imprejurarilor din Moscova nu pot lasa pe nimeni indiferent. Putini insa cunosc ca in realitate denumirea acestei catedrale este Catedrala Mijlocirii Maici Domnului.</p>
 
-                            <p class="text-justify">Conform legendelor medievale, un celebru poet din acele vremuri, Virgil, îndeplinea diverse ritualuri magice în interiorul celebrului Colosseum. Se credea, de asemenea, faptul că în secolul al XV-lea vrăjitorii se întâlneau în interiorul clădirii impozante pentru a pregăti poțiuni magice, realizate din ierburi care creșteau doar acolo. </p>
+                            <p class="text-justify">Din anul 1990, este declarata sit UNESCO. Opulenta si grandioasa, Moscova a fost de-a lungul secolelor epicentrul unor evenimente istorice importante si chiar a dictat intr-o oarecare masura cursul istoriei. Moscova se lauda cu povesti despre victorii, tragedii, inovatii si revolutii grandioase care au schimbat lumea pentru totdeauna. Astazi, capitala Rusiei este o metropola moderna si este locuita de circa 12 milioane de oameni.</p>
 
-                            <p class="text-justify">De-a lungul timpului, au fost descoperite diverse plante de origine non-indigenă, despre care se crede că sunt cele care au fost utilizate și care au pus bazele legendelor legate de ritualurile de magie care aveau loc în interiorul Amfiteatrului Flavian. </p>
+                            <p class="text-justify">Piata Rosie si Catedrala Sfantul Vasile sunt doar cateva dintre obiectivele turistice care iti vor taia rasuflarea, deoarece sunt grandioase si uimesc pe fiecare turist si vizitator sau chiar localnic. Numele de Piata Rosie provine din rusa de la cuvantul rosu, dar si frumos (daca luam sensul de arhaism). Piata Rosie e considerata principalul lucru ce trebuie vizitat cand ajungi in Rusia, este cea mai mare, grandioasa si populara piata din aceasta tara. Ea separa ex resedinta imperiala, numita si Kremlin, si sediul din prezent a presedintelui Vladimir Putin de o zona comerciala populata 7 zile din 7.</p>
 
+                            <p class="text-justify">Uimitor este faptul ca Catedrala Sfantul Vasile, Moscova dateaza tocmai din 1544, adica are aproape 5 secole de istorie, timp in care rolul ei in stat nu a fost ignorat. Acum este vizitata pentru frumusete sa uluitoare, dar si pentru faptul ca enoriasii pot vedea mormantul Fericitului Vasile. Acesta din urma a fost supranumit nebun dupa Hristos, deoarece slavea cu ardoare religia crestina si numele Domnului.</p>
+
+                            <p class="text-justify">Curios este faptul ca a suferit mult, multe parti i-au fost demolate, anume din cauza ca era foarte vulnerabila in fata incendiului si anume pe acel spatiu a aparut ulterior Piata, care este simbol al Rusilor la toate televiziunile si in general presa nationala si internationala.</p>
+
+                            <p class="text-justify">Cel mai interesant element ramane a fi arhitectura, iar aceasta Catedrala din Moscova este cunoscuta pentru cupolele sale uriase ce aduc aminte de bulbe de ceapa. Stilul arhitectural are si elemente bizantine. Exteriorul e considerat de multi critici o opera de arta, o adevarata incantare a ochilor, deoarece cladirea parca e inspirata din basme, fiecare element e diferit, design-ul e bazat pe elemente atat florale, ca si geometrice, de asemenea sunt prezente diverse culori vii, ce atrag atentia deodata ce pui ochiul pe cladire. Peretii din exteriorul cladirii sunt o amestecatura incantatoare de culori, forme, elemente, simboluri, ornamente mono crome si intens pigmentate. Totodata, interiorul este si el de o frumusete exceptionala, deoarece e imbogatit cu mai mult de 400 icoane, ce dateaza de 3-4 secole in urma.</p>
                         </div>
                     </div>
                 </div>
@@ -103,40 +120,40 @@
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/29.jpg" alt=""></a>
+                                    <a href="#"><img src="images/52.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/29.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/52.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/30.jpg" alt=""></a>
+                                    <a href="#"><img src="images/53.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/30.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/53.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/31.jpg" alt=""></a>
+                                    <a href="#"><img src="images/54.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/31.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/54.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/32.jpg" alt=""></a>
+                                    <a href="#"><img src="images/55.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/32.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/55.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
@@ -202,6 +219,7 @@
     <script src="plugins/youtube-player/jquery.mb.YTPlayer.min.js"></script>
 
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
 </body>
 
 </html>

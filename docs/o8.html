@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Atracții turistice în Europa</title>
-
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -31,6 +42,10 @@
                         <div class="container">
                             <nav>
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -57,12 +72,12 @@
                 </div>
             </div>
         </header>
-        <section class="fullscreen background-overlay" data-bg-video="video/lofoten.mp4">
+        <section class="fullscreen background-overlay" data-bg-video="video/acropole.mp4">
             <div class="container-fluid">
                 <div class="container-fullscreen">
                     <div class="text-middle text-center text-light">
-                        <h1 class="text-lg">Fiordurile norvegiene</h1>
-                        <p class="lead">Peisaje de basm în nordul Europei</p>
+                        <h1 class="text-lg">Acropolele din Atena</h1>
+                        <p class="lead">Stânca sacră a Greciei</p>
                         
                     </div>
                 </div>
@@ -75,68 +90,67 @@
                 <div class="row m-b-40">
                     <div class="col-lg-10 center">
                         <div class="project-description text-center">
-                            <h2>Fiordurile norvegiene</h2>
+                            <h2>Acropolele din Atena</h2>
 
-                            <p class="text-justify">Norvegia a fost ani la rând prima în topul celor mai fericite nații din lume. Poate nu doar nivelul de trai este  de „vină” și peisajele ajută mult. O zi cu trenul și cu vaporul prin fiordurile spectaculoase. Fiordurile norvegiene – văi adânci, abrupte, în formă de U, săpate în stâncă de ghețari – s-au format acum circa trei milioane de ani. Pe toată coasta de vest a Norvegiei, sute de golfuri șerpuitoare și adesea înguste leagă Marea Norvegiei de continent. </p>
+                            <p style="text-align: justify;">Amplasat deasupra orasului Atena, pe un deal stancos, <strong>Acropole</strong> sau, cum mai este cunoscuta, “<em>Stanca Sacra</em>” a Atenei, este una dintre cele mai populare monumente culturale ale lumii. Aceasta veche fortareata reprezinta cel mai semnificativ punct de referinta al culturii antice grecesti, dar si simbolul orasului Atena, fiind apogeul dezvoltarii artistice grecesti, realizat in secolul al V-lea i.H.</p>
 
-                            <p class="text-justify">Cel mai impresionant traseu trece prin fiordul Sogne, „regele fiordurilor”, cel mai lung din țară, având 204 kilometri lungime și 1.309 metri adâncime. Mica ambarcațiune de croazieră înaintează pufăind prin dârele formate pe suprafața apei, la umbra țărmurilor abrupte și a pădurilor de pin, prin care nu pătrunde nici o rază de lumină. </p>
+                            <p style="text-align: justify;">Intinzandu-se pe o suprafata de aproape 3 ha, Acropole este situata la o altitudine de 156 de metri deasupra vaii Ilissos, si intruchipeaza expresia suprema a adaptarii arhitecturii pe un loc natural. A fost locuita inca din neoliticul timpuriu (mileniul al VI-lea i.H.), iar in mileniul al II-lea i.H. functiona ca si o cetate ce proteja lacasurile de cult si palatele regale, fiind inconjurata de un zid – Pelasgicon, construit inaintea invaziilor doriene ce amenintau Atena la inceputul anilor 1200 i.H.</p>
 
-                            <p class="text-justify">Cascadele se prăvălesc peste stânci aproape verticale, iar pe malul apei își fac apariția satele, care par pictate pe o carte poștală, cu tradiționalele lor case roșii din lemn și cu turlele albe ale bisericilor. Scăldate vara de lumina orbitoare a soarelui și biciuite iarna de ploi năprasnice, fiordurile sunt de o frumusețe sălbatică, iar măreția lor vă înfioară. </p>
+                            <p style="text-align: justify;">In timpul perioadei clasice (450-330 i.H.), Acropole a capatat infatisarea sa definitiva, cand au fost construite trei temple importante chiar si in ziua de azi: in centru se afla Parthenon-ul sau Templul Fecioarei Atena, mai la nord de acesta se gasea templul Erechtheion, in timp ce la sud de intrarea in cadrul fortaretei, se inalta Templul lui Nike. Tot in aceasta perioada a fost realizata si celebra poarta Propylaea, ce permite intrarea in Acropole. In partea de sud a Acropolei se gasesc astazi ruinele teatrului in aer liber, teatru cunoscut ca si Teatrul lui Dionisos, iar la doar cateva sute de metri se poate vedea Teatrul lui Herodes Atticus, un bogat aristocrat grec, acum partial reconstruit.</p>
 
-                            <p class="text-justify">Pentru a ajunge pe coastă, luați trenul spre Myrdal de pe linia Oslo-Bergen, apoi înspre Flåm, o capodoperă inginerească de tunele deschise care se strecoară pe pante aparent inaccesibile. Călătoria durează o oră și vă oferă una dintre cele mai frumoase priveliști din lume. </p>
+                            <p style="text-align: justify;">In timpul dominatiei Imperiului Bizantin, templele existente au fost transformate in biserici, cum a fost si cazul Parthenon-ului, cand a devenit o biserica dedicata Fecioarei Maria. In anul 1204, dupa caderea Imperiul Bizantin, Acropole a devenit centrul administrativ al orasului Atena, iar Parthenonul catedrala sa, tot aici fiind construit si un turn de dimensiuni mari – Turnul Francilor, care a fost demolat abia in secolul al XIX-lea. Cand turcii au preluat orasul in anul 1456, acesta a devenit o moschee, Parthenon-ul fiind utilizat ca si sediu al armatei turcesti, iar Erechtheion-ul functiona ca si harem al guvernatorului turc.</p>
 
-                            <p class="text-justify">Perioada optimă de vizitare a acestor locuri fantastice sunt lunile de vară, mai-septembrie. Acestea sunt adesea însorite și constituie vârful sezonului, lunile de iarnă, lungi și întunecate, vă garantează o experiență furtunoasă și o atmosferă inedită. </p>
+                            <p style="text-align: justify;">Dupa eliberarea Atenei de sub dominatia Imperiului Otoman, protejarea, conservarea si restaurarea monumentelor a fost una dintre principalele sarcini ale noului stat grec, primele sapaturi arheologice din zona Acropole avand loc intre anii 1835-1837.</p>
 
-                            <p class="text-justify">La Naeroyfjord, cel mai îngust dintre fiorduri, puteți vedea unul dintre cele mai frumoase peisaje din nordul Europei. Apele albastre sunt în puternic contrast cu pinii verzi, iar munții acoperiți de zăpadă se înalță amenințători deasupra tuturor. </p>
+                            <p style="text-align: justify;">Toate artefactele antice de valoare sunt prezentate in cadrul Muzeului Acropole, amplasat pe panta sudica a dealului ce gazduieste intreg ansamblul de temple, la o distanta de 280 de metri de Templul Fecioarei Atena.</p>
 
-                            <p class="text-justify">Cu puțin noroc, s-ar putea să vedeți foci încălzindu-se la soare pe malul apei. Pentru cei plini de energie, sătucul Flåm („cătun între munți abrupți”) este locul ideal din care puteți pleca într-o excursie cu caiacul în apele fiordului. </p>
+                            <p style="text-align: justify;">La data de 27 martie 2007, Acropole se gasea pe lista celor mai importante monumente ale Patrimoniul Cultural European.</p> 
 
-                            <p class="text-justify">Bergen, al doilea oraș ca mărime din Norvegia, este o localitate cu clădiri medievale din lemn, care s-au păstrat foarte bine și  pe care le puteți vedea mai ales în jurul portului Bryggen, inclus în Patrimoniul Mondial UNESCO. </p>
+                        </div>
 
-                            <p class="text-justify">Trolltunga este o destinaţie căutată de amatorii de senzaţii tari, dornici să se fotografieze pe marginea prăpastiei, la 1.100 de metri altitudine. În ultima eră glaciară, o parte din munte a îngheţat, s-a rupt şi a lăsat o bucată de stâncă plutind ameninţător la 700 de metri deasupra lacului Ringedalsvatnet din Skjeggedal, în Norvegia. </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-10 center">
+                <div class="col-lg-8 center">
                     <div class="carousel carousel-promotion m-b-40" data-items="1" data-margin="40" data-loop="true" data-autoplay="true">
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/56.jpg" alt=""></a>
+                                    <a href="#"><img src="images/41.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/56.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/41.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/57.jpg" alt=""></a>
+                                    <a href="#"><img src="images/42.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/57.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/42.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/58.jpg" alt=""></a>
+                                    <a href="#"><img src="images/43.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/58.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/43.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/59.jpg" alt=""></a>
+                                    <a href="#"><img src="images/44.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/59.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/44.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
@@ -202,6 +216,7 @@
     <script src="plugins/youtube-player/jquery.mb.YTPlayer.min.js"></script>
 
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
 </body>
 
 </html>

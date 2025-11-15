@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Atracții turistice în Europa</title>
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="body-inner">
         <header id="header" data-transparent="true" data-fullwidth="true" class="dark submenu-light">
              <div class="header-inner">
                 <div class="container">
+
                     <div id="logo">
                         <a href="index.html">
                             <span class="logo-default">Atracții turistice în Europa</span>
                             <span class="logo-dark">Atracții turistice în Europa</span>
                         </a>
                     </div>
+
                     <div id="mainMenu-trigger">
                         <a class="lines-button x"><span class="lines"></span></a>
                     </div>
+
                     <div id="mainMenu">
                         <div class="container">
                             <nav>
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -51,80 +72,92 @@
                 </div>
             </div>
         </header>
-        <section class="fullscreen background-overlay" data-bg-video="video/loarei.mp4">
+        <section class="fullscreen background-overlay" data-bg-video="video/castle.mp4">
             <div class="container-fluid">
                 <div class="container-fullscreen">
                     <div class="text-middle text-center text-light">
-                        <h1 class="text-lg">Valea Loarei</h1>
-                        <p class="lead">Cele mai spectaculoase priveliști din Franța</p>
+                        <h1 class="text-lg">Castelul Neuschwanstein</h1>
+                        <p class="lead">Cel mai frumos castel din Germania</p>
+                        
                     </div>
                 </div>
             </div>
         </section>
+
         <section id="page-content" class="p-b-0 p-t-60">
             <div class="container">
+
                 <div class="row m-b-40">
                     <div class="col-lg-10 center">
                         <div class="project-description text-center">
-                            <h2>Valea Loarei</h2>
-                            <p class="text-justify">Valea Loarei este cea mai mare zonă a Franței care face parte din patrimoniul mondial UNESCO.</p>
-                            <p class="text-justify">De-a lungul râului, pe o extindere de aproximativ 350 km, care se întinde de la Angers la Orléans, răsar maiestuoase unele dintre cele mai renumite castele din lume, vizitate în fiecare an de milioane de turiști. Castelele de pe Valea Loarei sunt, de fapt, a doua atracție a Franței după Turnul Eiffel.</p>
-                            <p class="text-justify">La mai puțin de două ore de Paris, deschide valea Castelul Chambord. Inevitabil, cel mai mare și mai prestigios dintre castelele Renașterii franceze, precum și patrimoniu UNESCO. Nu pierdeți miile de hectare de parc care înconjoară castelul ce pot fi descoperite pe jos sau cu bicicleta.</p>
-                            <p class="text-justify">După palatul din Versailles, Castelul Chenonceau este cel mai vizitat castel din Franța. Traversează râul Cher și este, de asemenea, cunoscut sub numele de Castelul celor două Doamne – Diana de Poitiers și Caterina de’ Medici, soția și amanta regelui Henric al II-lea. Este singurul castel care are ghid turistic în 11 limbi ce pot fi descărcate pe smartphone. În fiecare weekend, în timpul verii, se organizează un tur ghidat în splendidele grădini.</p>
-                            <p class="text-justify">Dar cele mai faimoase grădini sunt cele ale Castelului Villandry. Distribuite pe trei nivele, ele găzduiesc flori, plante și legume.</p>
-                            <p class="text-justify">Balzac l-a definit ca fiind „un diamant faţetat amplasat în valea râului Indre”. Este vorba despre Castelul Azay-le-Rideau, situat pe o insulă în mijlocul unui râu domnește acest castel clasic renascentist.</p>
-                            <p class="text-justify">În afară de a fi frumos pe exterior, Castelul Valençay, locuința teribilului Talleyrand, ministrul lui Napoleon, este în plus, complet mobilat. Născut ca o cetate feudală, de-a lungul secolelor, a fost extins în diferite stiluri. În serile de vară, în parc se organizează spectacole de sunete, lumini și piese.</p>
-                            <p class="text-justify">Este o proprietate privată, dar o puteți vizita, Cheverny, este un mic conac în mijlocul unei pajiști care găzduiește lucrările unor artiști emergenți.</p>
-                            <p class="text-justify">În Amboise se află Castelul Regal. O uriașă cetate vizibilă din întreg orașul care a găzduit cele mai mari personalități, inclusiv Leonardo da Vinci, al cărui mormânt este păstrat în Capela Sfântului Hubert din apropiere.</p>
+                            <h2>Castelul Neuschwanstein</h2>
+
+                            <p class="text-justify">Cel mai frumos castel din lume a fost declarat Castelul Neuschwanstein din Germania. Acesta este construit pe un deal înalt şi este înconjurat de peisaje alpine ameţitoare din Bavaria. Castelul Neuschwanstein, construit la jumătatea secolului XIX, mai este numit castelul din poveşti, fiind sursa de inspirație pentru Castelul Frumoasei din Pădurea Adormită din cadrul Disneyland. </p>
+
+                            <p class="text-justify">Castelul a fost construit din ordinul regelui Ludovic al II-lea al Bavariei ca un refugiu, un loc în care a încercat să se ascundă de realitate şi să trăiască în lumea viselor. El a creat şi alte castele minunate în locuri îndepărtate și inaccesibile. </p>
+
+                            <p class="text-justify">Construcţia castelului Neuschwanstei a durat 17 ani şi a necesitat eforturi titanice şi tone de materiale de construcţie. Pentru a putea fi construit, la ordinul lui Ludovic terenul pe care se află acum acest castel a fost dinamitat pentru a permite coborârea lui cu 8 metri. </p>
+
+                            <p class="text-justify">Pe perioada construcţiei castelului, regele Ludovic locuia în castelul din Hohenschwangau de unde monitoriza lucrările cu ajutorul unui telescop. Pereţii interiori au castelului sunt acoperiţi cu fresce, care ilustrează scene din operele de poveste ale Wagner, un prieten apropiat al lui Ludovic. </p>
+
+                            <p class="text-justify">Sala tronului, care nu a mai fost terminată, poate fi considerată drept cea mai impresionantă încăpere din castel. </p>
+
+                            <p class="text-justify">De asemenea, la realizarea bordurii patului, decorat cu sculpturi delicate din lemn, au lucrat 15 maeştri sculptori timp de patru ani şi jumătate. </p>
+
+                            <p class="text-justify">Castelul trebuia să fie chiar şi mai spectaculos, însă după moartea regelui lucrările au fost suspendate, iar turnul principal al castelului, înalt 90 de metri, nu a mai fost construit niciodată. </p>
+
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-10 center">
                     <div class="carousel carousel-promotion m-b-40" data-items="1" data-margin="40" data-loop="true" data-autoplay="true">
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/1.jpg" alt=""></a>
+                                    <a href="#"><img src="images/37.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/1.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/37.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/14.jpg" alt=""></a>
+                                    <a href="#"><img src="images/38.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/14.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/38.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/15.jpg" alt=""></a>
+                                    <a href="#"><img src="images/39.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/15.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/39.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/16.jpg" alt=""></a>
+                                    <a href="#"><img src="images/40.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/16.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/40.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
+
         <footer id="footer">
             <div class="footer-content">
                 <div class="container">
@@ -170,11 +203,18 @@
                 </div>
             </div>
         </footer>
+
     </div>
+
     <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
+
     <script src="js/jquery.js"></script>
     <script src="js/plugins.js"></script>
+
     <script src="plugins/youtube-player/jquery.mb.YTPlayer.min.js"></script>
+
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
 </body>
+
 </html>

@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Atracții turistice în Europa</title>
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
 
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
     <div class="body-inner">
         <header id="header" data-transparent="true" data-fullwidth="true" class="dark submenu-light">
              <div class="header-inner">
                 <div class="container">
-
                     <div id="logo">
                         <a href="index.html">
                             <span class="logo-default">Atracții turistice în Europa</span>
                             <span class="logo-dark">Atracții turistice în Europa</span>
                         </a>
                     </div>
-
                     <div id="mainMenu-trigger">
                         <a class="lines-button x"><span class="lines"></span></a>
                     </div>
-
                     <div id="mainMenu">
                         <div class="container">
                             <nav>
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -57,98 +68,80 @@
                 </div>
             </div>
         </header>
-        <section class="fullscreen background-overlay" data-bg-video="video/pisa.mp4">
+        <section class="fullscreen background-overlay" data-bg-video="video/loarei.mp4">
             <div class="container-fluid">
                 <div class="container-fullscreen">
                     <div class="text-middle text-center text-light">
-                        <h1 class="text-lg">Turnul din Pisa</h1>
-                        <p class="lead">Cel mai misterios monument din Italia</p>
-                        
+                        <h1 class="text-lg">Valea Loarei</h1>
+                        <p class="lead">Cele mai spectaculoase priveliști din Franța</p>
                     </div>
                 </div>
             </div>
         </section>
-
         <section id="page-content" class="p-b-0 p-t-60">
             <div class="container">
-
                 <div class="row m-b-40">
                     <div class="col-lg-10 center">
                         <div class="project-description text-center">
-                            <h2>Turnul din Pisa</h2>
-
-                            <p class="text-justify">Italia este țara care deține cele mai multe monumente istorice UNESCO din lume, acesta fiind unul dintre motivele pentru care aceasta atrage atât de mulți turiști anual. Unul dintre aceste obiective este celebrul Turn din Pisa, care atrage imediat atenția datorită faptului că este înclinat.</p>
-
-
-                            <p class="text-justify">Una dintre puținele greșeli ale constructorilor italieni, determinată de natura capricioasă a solului, s-a transformat într-un site UNESCO și într-una dintre cele mai cunoscute clădiri din întreaga lume. Întrucât fundația Turnului din Pisa nu a fost suficient de solidă, acesta a început să se încline în momentul în care constructorii au vrut sa construiască cel de-al doilea etaj al clădirii.</p>
-
-                            <p class="text-justify">Acestea sunt aspecte cunoscute despre neobișnuitul Turn din Pisa. Cât de multe lucruri știți însă despre istoria acestui monument? Astăzi veți descoperi cele mai inedite curiozități și legende care au la bază cel mai misterios monument din Italia.</p>
-
-                            <p class="text-justify">Știați că Turnul din Pisa nu a arătat astfel întotdeauna? În momentul în care constructorii italieni au ajuns în etapa de construcție a celui de-al doilea etaj al clădirii, aceasta a început să se încline.</p>
-
-                            <p class="text-justify">Specialiștii au încercat să remedieze această situație, prin utilizarea unor greutăți variabile a coloanelor, cu scopul de a compensa înclinația. Acest truc însă s-a dovedit a fi inutil, iar constructorii au continuat proiectul, ignorând problema apărută inițial.</p>
-
-                            <p class="text-justify">Ca urmare a greutății adăugate construcției, aceasta a început să se încline în direcția opusă. Deși construcția s-a oprit la etajul patru din cele opt planificate timp de un secol, din lipsa unor soluții optime, Turnul din Pisa a devenit unul dintre cele mai celebre monumente istorice din Italia și din lume.</p>
-
-                            <p class="text-justify">Inițial, Turnul din Pisa a fost construit pentru a deveni cea mai înaltă clopotniță din lume. După 200 ani de la începerea proiectului de construcție, atunci când turnul a fost finalizat, șapte clopote au fost incluse în acesta.</p>
-
-                            <p class="text-justify">Știați că fiecare dintre aceste clopote corespund unei note muzicale? Cu toate acestea, celebrele clopote nu au bătut niciodată în turn de teamă că vibrațiile lor ar putea accentua gradul de înclinație al turnului.</p>
-
-                            <p class="text-justify">Celebra clădire înaltă din Italia ar fi trebuit să fie dărâmată în cel de-al Doilea Război Mondial, pentru a elimina riscul adăpostirii soldaților lunetiști în interiorul acesteia. Cu toate acestea, celebrul turn a supraviețuit ca prin minune, întrucât soldații americani au fost impresionați de aspectul său inedit. Aceștia au încălcat ordinele, lăsând clădirea neatinsă.</p>
-
-
+                            <h2>Valea Loarei</h2>
+                            <p class="text-justify">Valea Loarei este cea mai mare zonă a Franței care face parte din patrimoniul mondial UNESCO.</p>
+                            <p class="text-justify">De-a lungul râului, pe o extindere de aproximativ 350 km, care se întinde de la Angers la Orléans, răsar maiestuoase unele dintre cele mai renumite castele din lume, vizitate în fiecare an de milioane de turiști. Castelele de pe Valea Loarei sunt, de fapt, a doua atracție a Franței după Turnul Eiffel.</p>
+                            <p class="text-justify">La mai puțin de două ore de Paris, deschide valea Castelul Chambord. Inevitabil, cel mai mare și mai prestigios dintre castelele Renașterii franceze, precum și patrimoniu UNESCO. Nu pierdeți miile de hectare de parc care înconjoară castelul ce pot fi descoperite pe jos sau cu bicicleta.</p>
+                            <p class="text-justify">După palatul din Versailles, Castelul Chenonceau este cel mai vizitat castel din Franța. Traversează râul Cher și este, de asemenea, cunoscut sub numele de Castelul celor două Doamne – Diana de Poitiers și Caterina de’ Medici, soția și amanta regelui Henric al II-lea. Este singurul castel care are ghid turistic în 11 limbi ce pot fi descărcate pe smartphone. În fiecare weekend, în timpul verii, se organizează un tur ghidat în splendidele grădini.</p>
+                            <p class="text-justify">Dar cele mai faimoase grădini sunt cele ale Castelului Villandry. Distribuite pe trei nivele, ele găzduiesc flori, plante și legume.</p>
+                            <p class="text-justify">Balzac l-a definit ca fiind „un diamant faţetat amplasat în valea râului Indre”. Este vorba despre Castelul Azay-le-Rideau, situat pe o insulă în mijlocul unui râu domnește acest castel clasic renascentist.</p>
+                            <p class="text-justify">În afară de a fi frumos pe exterior, Castelul Valençay, locuința teribilului Talleyrand, ministrul lui Napoleon, este în plus, complet mobilat. Născut ca o cetate feudală, de-a lungul secolelor, a fost extins în diferite stiluri. În serile de vară, în parc se organizează spectacole de sunete, lumini și piese.</p>
+                            <p class="text-justify">Este o proprietate privată, dar o puteți vizita, Cheverny, este un mic conac în mijlocul unei pajiști care găzduiește lucrările unor artiști emergenți.</p>
+                            <p class="text-justify">În Amboise se află Castelul Regal. O uriașă cetate vizibilă din întreg orașul care a găzduit cele mai mari personalități, inclusiv Leonardo da Vinci, al cărui mormânt este păstrat în Capela Sfântului Hubert din apropiere.</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-10 center">
                     <div class="carousel carousel-promotion m-b-40" data-items="1" data-margin="40" data-loop="true" data-autoplay="true">
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/33.jpg" alt=""></a>
+                                    <a href="#"><img src="images/1.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/33.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/1.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/34.jpg" alt=""></a>
+                                    <a href="#"><img src="images/14.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/34.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/14.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/35.jpg" alt=""></a>
+                                    <a href="#"><img src="images/15.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/35.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/15.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/36.jpg" alt=""></a>
+                                    <a href="#"><img src="images/16.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/36.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/16.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-
         <footer id="footer">
             <div class="footer-content">
                 <div class="container">
@@ -194,17 +187,12 @@
                 </div>
             </div>
         </footer>
-
     </div>
-
     <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
-
     <script src="js/jquery.js"></script>
     <script src="js/plugins.js"></script>
-
     <script src="plugins/youtube-player/jquery.mb.YTPlayer.min.js"></script>
-
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
 </body>
-
 </html>

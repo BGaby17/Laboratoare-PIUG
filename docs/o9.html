@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Atracții turistice în Europa</title>
-
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -31,6 +42,10 @@
                         <div class="container">
                             <nav>
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -57,12 +72,12 @@
                 </div>
             </div>
         </header>
-        <section class="fullscreen background-overlay" data-bg-video="video/red.mp4">
+        <section class="fullscreen background-overlay" data-bg-video="video/hagia.mp4">
             <div class="container-fluid">
                 <div class="container-fullscreen">
                     <div class="text-middle text-center text-light">
-                        <h1 class="text-lg">Catedrala Sfântul Vasile</h1>
-                        <p class="lead">Simbolul Moscovei</p>
+                        <h1 class="text-lg">Hagia Sofia</h1>
+                        <p class="lead">Cea mai frumoasă moschee din Istanbul</p>
                         
                     </div>
                 </div>
@@ -75,27 +90,20 @@
                 <div class="row m-b-40">
                     <div class="col-lg-10 center">
                         <div class="project-description text-center">
-                            <h2>Catedrala Sfântul Vasile</h2>
+                            <h2>Hagia Sofia</h2>
 
+                            <p class="text-justify">Hagia Sofia a fost initial o biserica crestin ortodoxa fiind transformata intr-o moschee in anul 1453 de turci si apoi intr-un muzeu in anul 1935. Este considerata una din cele mai grandioase cladiri din istorie. Cucerirea ei de otomani la caderea Constantinopolului este considerata una din cele mai mari tragedii ale crestinitatii de credinta ortodoxa greaca. </p>
 
+                            <p class="text-justify">Numele ei provine din greaca si inseamna "Biserica intelepciunii sfinte a lui Dumnezeu". De asemenea este cunoscuta si ca "Sancta Sofia" in latina sau "Ayasofya" in turca. Sofia nu este un nume de sfant ci in greaca inseamna "intelepciune". </p>
 
-                            <p class="text-justify"> Catedrala Sfantul Vasile din Moscova – sunt putine cuvinte cu care o poti descrie : culorile sunt superbe, iar arhitectura este unica in lume, o adevarata comoara a rusilor cu care se mandresc enorm. Daca ajungeti vreodata la Moscova, Piata Rosie este primul lucru pe care trebuie sa il vizitati, anume acolo veti descoperi stilul autohton si veti gusta cu adevarat din cultura si spiritul rusesc.</p>
+                            <p class="text-justify">Hagia Sofia este acoperita de un dom cu diametrul de 31 de metri avand o inaltime de 56 de metri (un pic mai mic ca cel care acopera Panteonul din Roma). Domul este sprijinit pe pandantive (4 sectiuni triunghiulare concave) care rezolva problema sprijinirii bazei circulare a domului pe o baza rectangulara. La Hagia Sofia greutatea domului este mentinuta si de patru piloni masivi situati in colturi. </p>
 
-                            <p class="text-justify">Probabil fiecare dintre noi a vazut macar odata fotografiile cu aceasta Catdrala vestita, mai ales alaturi de articifii sau oameni ce se distreaza. Ei bine, s-a demonstrat ca prin Piata Rosie trec zilnic mii de curiosi, turisti recent ajunsi la Moscova, dar si localnici admiratori de arta, admiratori de frumos sau pur si simplu patrioti.</p>
+                            <p class="text-justify">La capatul de vest (intrarea) si de est, deschiderile arcelor se continua cu jumatati de domuri sustinute in pendentive mai mici. Desi ierarhia domurilor a fost construita pentru a crea un spatiu mai mare in interior, aceasta arhitectura este de neexplicat in antichitate. Toate suprafetele din interior sunt invelite cu marmura policroma, verde si alba cu porfir mov si mozaicuri aurii. La exterior, peretii simpli din ghips dezvaluie claritatea boltei si a domului. </p>
 
-                            <p class="text-justify">Carisma si atractia generata de Catedrala se datoareaza intr-o oarecare masura si speculatiilor, controverselor ce au aparut pe parcursul ultimelor 5 secole, intrucat oamenilor le plac povestile incitante si intrigante, iar asa creste si popularitatea edificiului.</p>
+                            <p class="text-justify">Nu a ramas nimic din biserica care a fost construita initial pe acelasi loc in sec IV. Dupa demolarea primei biserici, a fost construita cea de-a doua biserica de Constantin al II-lea, fiul lui Constantin cel Mare care a ars in timpul rascoalei din anul 532. Cladirea a fost reconstruita sub supravegherea personala a Imparatuui Iustinian I dar in timpul cutremurului din anul 989 s-a daramat. Dupa cutremur, guvernul bizantin a ales ca arhitect pentru noua biserica pe Tirdat, creatorul maretelor biserici Ani si Agine. </p>
 
-                            <p class="text-justify">Toti cei care au vizitat Piata Rosie nu au ezitat sa faca o fotografie, intrucat cromatica si in general atmosfera colorata, dar cu spirit strict si dur a imprejurarilor din Moscova nu pot lasa pe nimeni indiferent. Putini insa cunosc ca in realitate denumirea acestei catedrale este Catedrala Mijlocirii Maici Domnului.</p>
+                            <p class="text-justify">Hagia Sofia este unul din cele mai importante exemple de arhitectura bizantina care a supravietuit. Templul, in sine, era asa bogat si atat de decorat artistic incat Iustinian a spus "Solomon, mi-ai depasit orice inchipuire". Iustinian a verificat ca era cea mai mare catedrala construita vreodata in acele vremuri, ea ramanand cea mai mare catedrala timp de 1.000 de ani pana la terminarea Catedralei din Sevilia. </p>
 
-                            <p class="text-justify">Din anul 1990, este declarata sit UNESCO. Opulenta si grandioasa, Moscova a fost de-a lungul secolelor epicentrul unor evenimente istorice importante si chiar a dictat intr-o oarecare masura cursul istoriei. Moscova se lauda cu povesti despre victorii, tragedii, inovatii si revolutii grandioase care au schimbat lumea pentru totdeauna. Astazi, capitala Rusiei este o metropola moderna si este locuita de circa 12 milioane de oameni.</p>
-
-                            <p class="text-justify">Piata Rosie si Catedrala Sfantul Vasile sunt doar cateva dintre obiectivele turistice care iti vor taia rasuflarea, deoarece sunt grandioase si uimesc pe fiecare turist si vizitator sau chiar localnic. Numele de Piata Rosie provine din rusa de la cuvantul rosu, dar si frumos (daca luam sensul de arhaism). Piata Rosie e considerata principalul lucru ce trebuie vizitat cand ajungi in Rusia, este cea mai mare, grandioasa si populara piata din aceasta tara. Ea separa ex resedinta imperiala, numita si Kremlin, si sediul din prezent a presedintelui Vladimir Putin de o zona comerciala populata 7 zile din 7.</p>
-
-                            <p class="text-justify">Uimitor este faptul ca Catedrala Sfantul Vasile, Moscova dateaza tocmai din 1544, adica are aproape 5 secole de istorie, timp in care rolul ei in stat nu a fost ignorat. Acum este vizitata pentru frumusete sa uluitoare, dar si pentru faptul ca enoriasii pot vedea mormantul Fericitului Vasile. Acesta din urma a fost supranumit nebun dupa Hristos, deoarece slavea cu ardoare religia crestina si numele Domnului.</p>
-
-                            <p class="text-justify">Curios este faptul ca a suferit mult, multe parti i-au fost demolate, anume din cauza ca era foarte vulnerabila in fata incendiului si anume pe acel spatiu a aparut ulterior Piata, care este simbol al Rusilor la toate televiziunile si in general presa nationala si internationala.</p>
-
-                            <p class="text-justify">Cel mai interesant element ramane a fi arhitectura, iar aceasta Catedrala din Moscova este cunoscuta pentru cupolele sale uriase ce aduc aminte de bulbe de ceapa. Stilul arhitectural are si elemente bizantine. Exteriorul e considerat de multi critici o opera de arta, o adevarata incantare a ochilor, deoarece cladirea parca e inspirata din basme, fiecare element e diferit, design-ul e bazat pe elemente atat florale, ca si geometrice, de asemenea sunt prezente diverse culori vii, ce atrag atentia deodata ce pui ochiul pe cladire. Peretii din exteriorul cladirii sunt o amestecatura incantatoare de culori, forme, elemente, simboluri, ornamente mono crome si intens pigmentate. Totodata, interiorul este si el de o frumusete exceptionala, deoarece e imbogatit cu mai mult de 400 icoane, ce dateaza de 3-4 secole in urma.</p>
                         </div>
                     </div>
                 </div>
@@ -105,40 +113,40 @@
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/52.jpg" alt=""></a>
+                                    <a href="#"><img src="images/45.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/52.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/45.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/53.jpg" alt=""></a>
+                                    <a href="#"><img src="images/46.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/53.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/46.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/54.jpg" alt=""></a>
+                                    <a href="#"><img src="images/47.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/54.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/47.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/55.jpg" alt=""></a>
+                                    <a href="#"><img src="images/48.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/55.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/48.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
@@ -204,6 +212,7 @@
     <script src="plugins/youtube-player/jquery.mb.YTPlayer.min.js"></script>
 
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Atracții turistice în Europa</title>
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="body-inner">
+
+        <header id="header" data-fullwidth="true" data-transparent="true" class="dark submenu-light">
+            <div class="header-inner">
+                <div class="container">
+
+                    <div id="logo">
+                        <a href="index.html">
+                            <span class="logo-default">Atracții turistice în Europa</span>
+                            <span class="logo-dark">Atracții turistice în Europa</span>
+                        </a>
+                    </div>
+
+                    <div id="mainMenu-trigger">
+                        <a class="lines-button x"><span class="lines"></span></a>
+                    </div>
+
+                    <div id="mainMenu">
+                        <div class="container">
+                            <nav>
+                                <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
+                                    <li><a href="index.html">Prima pagină</a></li>
+                                    <li class="dropdown"><a href="#">Obiective turistice</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="o1.html">Valea Loarei</a></li>
+                                            <li><a href="o2.html">Santorini</a></li>
+                                            <li><a href="o3.html">Sagrada Familia</a></li>
+                                            <li><a href="o4.html">Turnul Eiffel</a></li>
+                                            <li><a href="o5.html">Colosseum</a></li>
+                                            <li><a href="o6.html">Turnul din Pisa</a></li>
+                                            <li><a href="o7.html">Castelul Neuschwanstein</a></li>
+                                            <li><a href="o8.html">Acropole</a></li>
+                                            <li><a href="o9.html">Hagia Sofia</a></li>
+                                            <li><a href="o10.html">Castelul Peleș</a></li>
+                                            <li><a href="o11.html">Catedrala Sfântul Vasile</a></li>
+                                            <li><a href="o12.html">Fiordurile norvegiene</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="foto.html">Galerie de imagini</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="page-title" class="page-title-center text-light" style="background-image:url(images/60.jpg);">
+            <div class="bg-overlay"></div>
+            <div class="container">
+                <div class="page-title">
+                    <h1>Galerie de imagini</h1>
+                </div>
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="index.html">Prima pagină</a>
+                        </li>
+                        <li class="active"><a href="#">Galerie de imagini</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-content">
+            <div class="container">
+
+                <!-- Câmp de căutare -->
+                <div style="text-align:center; margin-bottom: 30px;">
+                    <input type="text" id="searchInput" placeholder="Caută oraș">
+                </div>
+
+                <div id="portfolio" class="grid-layout portfolio-3-columns" data-margin="0">
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/28.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o4.html">
+                                    <h3>Turnul Eiffel</h3>
+                                    <span>Paris</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/50.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o10.html">
+                                    <h3>Castelul Peleș</h3>
+                                    <span>România</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/47.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o9.html">
+                                    <h3>Hagia Sofia</h3>
+                                    <span>Istanbul</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/32.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o5.html">
+                                    <h3>Colosseum</h3>
+                                    <span>Roma</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/17.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o2.html">
+                                    <h3>Santorini</h3>
+                                    <span>Greciei</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/57.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o12.html">
+                                    <h3>Fiordurile norvegiene</h3>
+                                    <span>Norvegia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/23.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o3.html">
+                                    <h3>Sagrada Familia</h3>
+                                    <span>Barcelona</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/36.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o6.html">
+                                    <h3>Turnul din Pisa</h3>
+                                    <span>Italia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/1.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o1.html">
+                                    <h3>Valea Loarei</h3>
+                                    <span>Franța</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/44.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o8.html">
+                                    <h3>Acropole</h3>
+                                    <span>Greciei</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/54.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o11.html">
+                                    <h3>Catedrala Sfântul Vasile</h3>
+                                    <span>Moscova</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/38.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o7.html">
+                                    <h3>Castelul Neuschwanstein</h3>
+                                    <span>Germania</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/45.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o9.html">
+                                    <h3>Hagia Sofia</h3>
+                                    <span>Istanbul</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/52.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o11.html">
+                                    <h3>Catedrala Sfântul Vasile</h3>
+                                    <span>Moscova</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/20.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o2.html">
+                                    <h3>Santorini</h3>
+                                    <span>Greciei</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/34.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o6.html">
+                                    <h3>Turnul din Pisa</h3>
+                                    <span>Italia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/25.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o4.html">
+                                    <h3>Turnul Eiffel</h3>
+                                    <span>Paris</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/59.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o12.html">
+                                    <h3>Fiordurile norvegiene</h3>
+                                    <span>Norvegia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/40.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o7.html">
+                                    <h3>Castelul Neuschwanstein</h3>
+                                    <span>Germania</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/21.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o3.html">
+                                    <h3>Sagrada Familia</h3>
+                                    <span>Barcelona</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/16.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o1.html">
+                                    <h3>Valea Loarei</h3>
+                                    <span>Franța</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/30.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o5.html">
+                                    <h3>Colosseum</h3>
+                                    <span>Roma</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/42.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o8.html">
+                                    <h3>Acropole</h3>
+                                    <span>Greciei</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/10.png" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o10.html">
+                                    <h3>Castelul Peleș</h3>
+                                    <span>România</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/29.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o5.html">
+                                    <h3>Colosseum</h3>
+                                    <span>Roma</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/26.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o4.html">
+                                    <h3>Turnul Eiffel</h3>
+                                    <span>Paris</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/18.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o2.html">
+                                    <h3>Santorini</h3>
+                                    <span>Greciei</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/33.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o6.html">
+                                    <h3>Turnul din Pisa</h3>
+                                    <span>Italia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/39.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o7.html">
+                                    <h3>Castelul Neuschwanstein</h3>
+                                    <span>Germania</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/49.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o10.html">
+                                    <h3>Castelul Peleș</h3>
+                                    <span>România</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/24.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o3.html">
+                                    <h3>Sagrada Familia</h3>
+                                    <span>Barcelona</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/58.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o12.html">
+                                    <h3>Fiordurile norvegiene</h3>
+                                    <span>Norvegia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/14.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o1.html">
+                                    <h3>Valea Loarei</h3>
+                                    <span>Franța</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/41.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o8.html">
+                                    <h3>Acropole</h3>
+                                    <span>Greciei</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/53.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o11.html">
+                                    <h3>Catedrala Sfântul Vasile</h3>
+                                    <span>Moscova</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/46.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o9.html">
+                                    <h3>Hagia Sofia</h3>
+                                    <span>Istanbul</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/15.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o1.html">
+                                    <h3>Valea Loarei</h3>
+                                    <span>Franța</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/56.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o12.html">
+                                    <h3>Fiordurile norvegiene</h3>
+                                    <span>Norvegia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/48.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o9.html">
+                                    <h3>Hagia Sofia</h3>
+                                    <span>Istanbul</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/27.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o4.html">
+                                    <h3>Turnul Eiffel</h3>
+                                    <span>Paris</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/37.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o7.html">
+                                    <h3>Castelul Neuschwanstein</h3>
+                                    <span>Germania</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/22.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o3.html">
+                                    <h3>Sagrada Familia</h3>
+                                    <span>Barcelona</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/55.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o11.html">
+                                    <h3>Catedrala Sfântul Vasile</h3>
+                                    <span>Moscova</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/35.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o6.html">
+                                    <h3>Turnul din Pisa</h3>
+                                    <span>Italia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/31.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o5.html">
+                                    <h3>Colosseum</h3>
+                                    <span>Roma</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/19.jpg" alt="" style="width: 388px;" ></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o2.html">
+                                    <h3>Santorini</h3>
+                                    <span>Greciei</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/43.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o8.html">
+                                    <h3>Acropole</h3>
+                                    <span>Greciei</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="portfolio-item overlay-light img-zoom ct-photography ct-media ct-branding ct-Media ct-webdesign">
+                        <div class="portfolio-item-wrap">
+                            <div class="portfolio-image">
+                                <a href="#"><img src="images/51.jpg" alt=""></a>
+                            </div>
+                            <div class="portfolio-description">
+                                <a href="o10.html">
+                                    <h3>Castelul Peleș</h3>
+                                    <span>România</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                                        
+                </div>
+
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="footer-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="widget">
+                                        <div class="widget-title">Atracții turistice în Europa</div>
+                                        <ul class="list">
+                                            <li><a href="o1.html">Valea Loarei</a></li>
+                                            <li><a href="o2.html">Santorini</a></li>
+                                            <li><a href="o3.html">Sagrada Familia</a></li>
+                                            <li><a href="o11.html">Catedrala Sfântul Vasile</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="widget">
+                                        <div class="widget-title">&nbsp;</div>
+                                        <ul class="list">
+                                            <li><a href="o4.html">Turnul Eiffel</a></li>
+                                            <li><a href="o5.html">Colosseum</a></li>
+                                            <li><a href="o6.html">Turnul din Pisa</a></li>
+                                            <li><a href="o12.html">Fiordurile Norvegiene</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="widget">
+                                        <div class="widget-title">&nbsp;</div>
+                                        <ul class="list">
+                                            <li><a href="o7.html">Castelul Neuschwanstein</a></li>
+                                            <li><a href="o8.html">Acropole</a></li>
+                                            <li><a href="o9.html">Hagia Sofia</a></li>
+                                            <li><a href="o10.html">Castelul Peleș</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
+</body>
+
+</html>

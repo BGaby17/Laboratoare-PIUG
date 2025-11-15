@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Atracții turistice în Europa</title>
-
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -31,6 +42,10 @@
                         <div class="container">
                             <nav>
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -57,12 +72,14 @@
                 </div>
             </div>
         </header>
-        <section class="fullscreen background-overlay" data-bg-video="video/castle.mp4">
+        <!-- end: Header -->
+        <!--Background Video -->
+        <section class="fullscreen background-overlay" data-bg-video="video/sagrada.mp4">
             <div class="container-fluid">
                 <div class="container-fullscreen">
                     <div class="text-middle text-center text-light">
-                        <h1 class="text-lg">Castelul Neuschwanstein</h1>
-                        <p class="lead">Cel mai frumos castel din Germania</p>
+                        <h1 class="text-lg">Sagrada Familia</h1>
+                        <p class="lead">Cea mai de seama opera a lui Antoni Gaudí</p>
                         
                     </div>
                 </div>
@@ -75,22 +92,19 @@
                 <div class="row m-b-40">
                     <div class="col-lg-10 center">
                         <div class="project-description text-center">
-                            <h2>Castelul Neuschwanstein</h2>
+                            <h2>Sagrada Familia</h2>
 
-                            <p class="text-justify">Cel mai frumos castel din lume a fost declarat Castelul Neuschwanstein din Germania. Acesta este construit pe un deal înalt şi este înconjurat de peisaje alpine ameţitoare din Bavaria. Castelul Neuschwanstein, construit la jumătatea secolului XIX, mai este numit castelul din poveşti, fiind sursa de inspirație pentru Castelul Frumoasei din Pădurea Adormită din cadrul Disneyland. </p>
+                            <p>Este una dintre cele mai impresionante biserici din lume și cel mai vizitat obiectiv din Barcelona. La Sagrada Familia, capodopera arhitectului catalan Antonio Gaudi, se află încă în construcție deși proiectul a fost inițiat acum mai bine de 100 de ani, în 1882.</p>
 
-                            <p class="text-justify">Castelul a fost construit din ordinul regelui Ludovic al II-lea al Bavariei ca un refugiu, un loc în care a încercat să se ascundă de realitate şi să trăiască în lumea viselor. El a creat şi alte castele minunate în locuri îndepărtate și inaccesibile. </p>
+                            <p>Oficial, La Sagrada Familia ar trebui terminată în anul 2026, când se împlinesc 100 de ani de la moartea lui Antonio Gaudi. Arhitectul catalan a supervizat construcția basilicii timp de 40 de ani, însă la data morții sale doar unul singur dintre turnurile basilicii fusese ridicat. Din 1926, proiectul a fost continuat după planurile arhitectului. </p>
 
-                            <p class="text-justify">Construcţia castelului Neuschwanstei a durat 17 ani şi a necesitat eforturi titanice şi tone de materiale de construcţie. Pentru a putea fi construit, la ordinul lui Ludovic terenul pe care se află acum acest castel a fost dinamitat pentru a permite coborârea lui cu 8 metri. </p>
+                            <p>În 1936, în timpul Războiului Civil Spaniol, basilica a fost atacată, iar atelierul în care erau păstrate schițele și planurile realizate de Gaudi a fost distrus. Acestea au fost reconstituite din alte surse, dar dispariția originalelor a iscat controverse, căci mulți susțin acum că Sagrada Familia, atunci când va fi terminată, nu va arăta așa cum și-ar fi dorit creatorul ei.</p>
 
-                            <p class="text-justify">Pe perioada construcţiei castelului, regele Ludovic locuia în castelul din Hohenschwangau de unde monitoriza lucrările cu ajutorul unui telescop. Pereţii interiori au castelului sunt acoperiţi cu fresce, care ilustrează scene din operele de poveste ale Wagner, un prieten apropiat al lui Ludovic. </p>
+                            <p>Gaudi a glumit odată spunând că Dumnezeul, clientul său, nu se grăbește să-și vadă basilica terminată. Arhitectul, care și-a dedicat peste patru decenii din viață acestui proiect, credea că Sagrada Familia este misiunea sa divină. Gaudi a murit la vârsta de 74 de ani în 1926 în urma unui accident – a fost lovit de un tramvai. Îmbrăcat în haine sărace și fără documente, Gaudi nu a fost recunoscut, ci luat drept un cerșetor, și nu i s-au acordat îngrijiri medicale imediate. A murit la trei zile după accident și a fost înmormântat în cripta basilicii sale. </p>
 
-                            <p class="text-justify">Sala tronului, care nu a mai fost terminată, poate fi considerată drept cea mai impresionantă încăpere din castel. </p>
+                            <p>La Sagrada Familia are opt turnuri acum, însă la finalul proiectul basilica va avea 18 turle, dintre care cea mai înaltă va avea 170 de metri înălțime. Cele 12 turle mici simbolizează apostolii lui Iisus, patru dintre ele îi reprezintă pe autorii Evangheliilor, iar cele două turle mari îi reprezintă pe Iisus și Fecioara Maria.</p>
 
-                            <p class="text-justify">De asemenea, la realizarea bordurii patului, decorat cu sculpturi delicate din lemn, au lucrat 15 maeştri sculptori timp de patru ani şi jumătate. </p>
-
-                            <p class="text-justify">Castelul trebuia să fie chiar şi mai spectaculos, însă după moartea regelui lucrările au fost suspendate, iar turnul principal al castelului, înalt 90 de metri, nu a mai fost construit niciodată. </p>
-
+                            <p>Gaudi a fost întrebat odată de ce depune atâta efort și timp în realizarea unor turle atât de elaborate din moment ce nimeni nu le va putea admira de sus. Arhitectul a răspuns că „Îngerii le vor vedea.”</p>
                         </div>
                     </div>
                 </div>
@@ -100,40 +114,40 @@
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/37.jpg" alt=""></a>
+                                    <a href="#"><img src="images/21.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/37.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/21.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/38.jpg" alt=""></a>
+                                    <a href="#"><img src="images/22.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/38.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/22.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/39.jpg" alt=""></a>
+                                    <a href="#"><img src="images/23.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/39.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/23.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/40.jpg" alt=""></a>
+                                    <a href="#"><img src="images/24.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/40.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/24.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
@@ -199,6 +213,7 @@
     <script src="plugins/youtube-player/jquery.mb.YTPlayer.min.js"></script>
 
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
 </body>
 
 </html>

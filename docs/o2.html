@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Atracții turistice în Europa</title>
-
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -31,6 +42,10 @@
                         <div class="container">
                             <nav>
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -57,13 +72,12 @@
                 </div>
             </div>
         </header>
-        <section class="fullscreen background-overlay" data-bg-video="video/peles.mp4">
+        <section class="fullscreen background-overlay" data-bg-video="video/santorini.mp4">
             <div class="container-fluid">
                 <div class="container-fullscreen">
                     <div class="text-middle text-center text-light">
-                        <h1 class="text-lg">Castelul Peleș</h1>
-                        <p class="lead">Cel mai frumos castel din România</p>
-                        
+                        <h1 class="text-lg">Santorini</h1>
+                        <p class="lead">Cea mai frumoasă insulă a Greciei</p>
                     </div>
                 </div>
             </div>
@@ -75,17 +89,22 @@
                 <div class="row m-b-40">
                     <div class="col-lg-10 center">
                         <div class="project-description text-center">
-                            <h2>Castelul Peleș</h2>
+                            <h2>Santorini</h2>
 
-                            <p class="text-justify">Castelul din Valea Peleș reședința de vară a regilor României, a fost construit pe vremea regelui Carol I al României (1866 - 1914) și a devenit unul dintre cele mai importante monumente ale Europei secolului XIX. Pe terenul cumpărat de rege au fost construite pe lângă castel: Pelișorul, Corpul de Gardă, Economatul, Casa de Vânătoare Foișor, Grajdurile, Uzina Electrică, și Vila Șipot.</p>
+                            <p>Santorini sau insula cretana a indragostitilor, este cea mai frumoasa si spectaculoasa insula a Greciei. Primeste anual un numar de turisti de 2 sau 3 ori mai mare decat numarul locuitorilor insulei. Desprinsa in timp dintr-un vulcan ea ofera turistilor munte si mare, alb si albastru, biserici ortodoxe dar si traditii. </p>
 
-                            <p class="text-justify">Până la terminarea castelului (1883), Regele Carol I și Regina Elisabeta, au locuit la casa de vânătoare, terminată înaintea castelului. Având uzină electrică proprie Peleșul a fost primul castel electrificat din Europa. Prin amenajările de după 1900, reședința a fost supraînălțată cu un etaj, de asemenea și turnul principal. În forma sa finală, clădirea cu o suprafață de 3200 mp, are de 160 de camere și peste 30 de băi. În cele 160 de încăperi ale sale castelul a adăpostit una dintre cele mai importante colecții de tablouri din Europa și o bogată colecție de arme, cu peste 4000 de piese europene și orientale, din secolele XIV-XVII.</p>
+                            <p>Santorini este taramul de unde porneste mitul Atlantidei. In trecut, minunata laguna a Portului Santorini era centrul insulei. Acesta a fost scufundat de puternicele eruptii vulcanice care au schimbat topografia locului, aducandu-i in schimb celebritatea; "nisipuri" negre si rosii, faleze naturale inalte de sute de metri. Capitala Insulei, Fira, este asezata intr-un perete vulcanic, pe o faleza inalta de 300 m. Casele de un alb orbitor, cu acoperisuri rotunjite, par chilii sapate in lava pietrificata, intre acestea stradutele mici si inguste duc spre magazine si taverne cu privire la mare. </p>
 
-                            <p class="text-justify">Frumusețea și bogăția lemnăriei sculptate și vitraliile colorate obțin pe drept admirația vizitatorilor. Castelul Peleș se vizitează în procent de 35%. Holul de onorare, o sala de receptie realizată în anul 1911 de Karel Liman dintr-o fostă curte interioară este bogat ornamentată în lemn, și are acoperiș din vitralii. Sălile de arme au fost amenajate între anii 1903-1906, iar sala de consilii, bogată în intarsii în 1914.</p>
+                            <p>Cea mai rapida modalitate de a calatori este avionul. Cursele charter pleaca saptamanal, incepand din 03 Iunie pana in 23 Septembrie de pe aeroportul Henri Coanda din Bucuresti.
+                            Zborul charter este operat cu compania Aegean Airlines. Pe segmentul de retur este un stop pe Insula Mykonos (turistii nu vor cobori din avion – aprox. 30-45 minute). </p>
 
-                            <p class="text-justify">Sala Florentina, Marele Salon este decorat în stilul neorenașterii italiene. Sala de teatru în stilului Ludovic XIV are 60 de locuri și loja regală. Apartamentul imperial a fost amenajat in 1906, in stilul Maria Theresa pentru vizita împăratul Austro-Ungariei, Franz Josef.</p>
+                            <p>Insula Santorini se află în Marea Egee şi este cea mai sudică dintre insulele Cyclade. Gruparea de 5 insule a apărut în urma erupţiei devastatoare de acum 3600 de ani a vulcanului cu acelaşi nume, erupţie care a avut ca efect scufundarea în mare a părţii centrale a insulei, dar şi apariţia actualei Caldera. Insula Santorini, atrage turiştii mai ales datorită legendei potrivit căreia în această regiune se află legendara Atlantida. Numele Santorini este unul mai recent, şi vine de la biserica de pe insulă, închinată Sfintei Irene, numită Aghia Irini de greci si Santa Rini de marinarii straini. </p>
 
-                            <p class="text-justify">După abdicarea Regelui Mihai, în 1947, castelul Peleș a intrat în circuitul turistic, iar celelate clădiri au fost folosite de oamenii de cultură ai vremii. După ce în ultimii ani ai comunismului tot complexul era închis, astăzi doar Foișorul rămâne, reședință prezidențială. În Economat și Corpul de Gardă sunt amenajate hoteluri, restaurante iar celelate clădiri au devenit vile turistice, sau de protocol.</p>
+                            <p>Plaja Kamari -cunoscuta si ca  Episkopi Gonia, este un punct de maxim interes turistic in Santorini, premiata cu Blue Flag si se intinde pana la Monolithos, avand o lungime de aproape 5 km. Este cea mai mare ca intindere din Santorini si din Ciclade, foarte bine organizata cu hoteluri, restaurante,terase si baruri chiar pe plaja, pentru toate gusturile si buzunarele. In fiecare an aici are loc si Festivalul de Jazz intr-o atmosfera speciala, organizat in incinta cinematografului in aer liber.  </p> 
+
+                            <p>Tot aici puteti alege unul dintre centrele de scuba diving sau puteti face putina miscare, urcand timp de 40 de minute muntele Profitis Ilias pentru a ajunge la situl arheologic Thira antica (exista bineinteles si varianta cu masina), puteti lua un caiaque care va poate duce pana la insula salbatica Anafi.
+                            Din cauza nisipului si pietricelor negre atmosferra devine incinsa in zilele toride de vara, de aceea este bine sa nu va uitati acasa papucii speciali pentru plaja. </p>
+
                         </div>
                     </div>
                 </div>
@@ -95,40 +114,40 @@
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/49.jpg" alt=""></a>
+                                    <a href="#"><img src="images/17.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/49.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/17.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/50.jpg" alt=""></a>
+                                    <a href="#"><img src="images/18.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/50.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/18.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/51.jpg" alt=""></a>
+                                    <a href="#"><img src="images/19.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/51.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/19.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/52.png" alt=""></a>
+                                    <a href="#"><img src="images/20.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/52.png" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/20.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
@@ -194,6 +213,8 @@
     <script src="plugins/youtube-player/jquery.mb.YTPlayer.min.js"></script>
 
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
+
 </body>
 
 </html>

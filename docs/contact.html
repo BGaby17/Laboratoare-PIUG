@@ -6,9 +6,74 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
     <title>Atracții turistice în Europa</title>
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
 
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+      <style>
+    /* poziționare iconiță eroare și wrapper pentru input */
+    .form-group{ position: relative; }
+    .form-group .form-control{ padding-right: 48px; box-sizing: border-box; }
+
+    .error-icon{
+      position: absolute;
+      right: 24px;
+      top: 53%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #ff4d4f;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      cursor: pointer;
+      z-index: 10;
+      border: none;
+    }
+
+    textarea + .error-icon,
+    .form-group textarea.form-control + .error-icon{
+      right: 8px;
+      top: 45px;
+    }
+
+    .error-text{
+      display: none;
+      color: #ff4d4f;
+      font-size: 13px;
+      margin-top: 6px;
+      line-height: 1.2;
+    }
+
+    /* când e setată clasa show-error arătăm textul (utile pe mobil) */
+    .form-group.show-error .error-text { display: block; }
+    .form-group.show-error .form-control { box-shadow: 0 0 0 3px rgba(255,77,79,0.06) inset; }
+
+    .invalid { /* păstrează clasa pentru stil suplimentar */ }
+    .sending { opacity: 0.8; pointer-events: none; }
+
+    /* mobile tweaks */
+    @media (max-width: 768px){
+      .form-group .form-control{ padding-right: 44px; }
+      .error-icon{ right: 25px; top: 45px; }
+      textarea + .error-icon,
+      .form-group textarea.form-control + .error-icon{ right: 8px; top: 45px; }
+    }
+   </style>
 </head>
 
 <body>
@@ -33,6 +98,10 @@
                         <div class="container">
                             <nav>
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -170,7 +239,128 @@
     <script src="js/plugins.js"></script>
 
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
 
+    <script>
+      (function(){
+        const form = document.querySelector('.widget-contact-form');
+        if (!form) return;
+        const submitBtn = form.querySelector('#form-submit');
+
+        function makeIconFor(input, msg){
+          const wrapper = input.parentElement;
+          // icon
+          let icon = wrapper.querySelector('.error-icon');
+          if (!icon){
+            icon = document.createElement('button');
+            icon.type = 'button';
+            icon.className = 'error-icon';
+            icon.innerText = '!';
+            icon.setAttribute('aria-label', 'Afișează mesaj de eroare');
+            
+            // dacă e textarea, adaugă clasă specială
+            if (input.tagName === 'TEXTAREA') {
+              icon.classList.add('error-icon-textarea');
+            }
+            
+            wrapper.appendChild(icon);
+            icon.addEventListener('click', ()=> wrapper.classList.toggle('show-error'));
+          }
+          // text de eroare (sub câmp)
+          let text = wrapper.querySelector('.error-text');
+          if (!text){
+            text = document.createElement('div');
+            text.className = 'error-text';
+            text.setAttribute('role', 'alert');
+            wrapper.appendChild(text);
+          }
+          text.textContent = msg;
+          wrapper.classList.add('show-error');
+          input.classList.add('invalid');
+
+          if (!text.id) text.id = 'err-' + Math.random().toString(36).slice(2,9);
+          input.setAttribute('aria-describedby', text.id);
+        }
+
+        function removeIconFor(input){
+          const wrapper = input.parentElement;
+          const icon = wrapper.querySelector('.error-icon');
+          const text = wrapper.querySelector('.error-text');
+          if (icon) icon.remove();
+          if (text) text.remove();
+          wrapper.classList.remove('show-error');
+          input.classList.remove('invalid');
+          input.removeAttribute('aria-describedby');
+        }
+
+ function validate(){
+          let valid = true;
+          const fields = form.querySelectorAll('.required');
+          fields.forEach(f => {
+            const v = (f.value || '').trim();
+            let errMsg = 'Introduceți Numele';
+            
+            if (!v){
+              if (f.type === 'email') errMsg = 'Introduceți o adresa de email';
+              else if (f.name === 'widget-contact-form-subject') errMsg = 'Introduceți subiectul';
+              else if (f.name === 'widget-contact-form-message') errMsg = 'Introduceți mesajul';
+              
+              makeIconFor(f, errMsg);
+              valid = false;
+            } else {
+              if (f.type === 'email'){
+                const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+                if (!ok){
+                  makeIconFor(f, 'Introduceți o adresă de email validă');
+                  valid = false;  // marchează ca invalid
+                } else {
+                  removeIconFor(f);  // dacă e valid, elimină iconița
+                }
+              } else {
+                removeIconFor(f);  // pentru alte câmpuri, elimină eroare dacă sunt completate
+              }
+            }
+          });
+          return valid;  // dacă valid = false, nu se declanșează sending
+        }
+
+        // curățare eroare la input (pe touch/typing)
+        form.addEventListener('input', (e)=>{
+          const t = e.target;
+          if (t.classList && t.classList.contains('required')) removeIconFor(t);
+        });
+
+        form.addEventListener('submit', function(ev){
+          ev.preventDefault();
+          if (!validate()) return;
+
+          // simulare trimitere: dezactivează butonul, afișează "Se trimite..." câteva secunde
+          submitBtn.disabled = true;
+          submitBtn.classList.add('sending');
+          const original = submitBtn.innerHTML;
+          submitBtn.innerHTML = '⏳ Trimitere...';
+
+          // simulare cerere (2.5s)
+          setTimeout(()=>{
+            // resetează formularul (șterge toate câmpurile)
+            form.reset();
+
+            // elimină iconițele și mesajele de eroare
+            form.querySelectorAll('.error-icon, .error-text').forEach(n => n.remove());
+            form.querySelectorAll('.form-group').forEach(g => g.classList.remove('show-error'));
+            form.querySelectorAll('.required').forEach(i => { i.classList.remove('invalid'); i.removeAttribute('aria-describedby'); });
+
+            // afișare scurtă stare de succes și revenire la textul original
+            submitBtn.innerHTML = '✔ Mesaj trimis';
+            submitBtn.classList.remove('sending');
+            submitBtn.disabled = false;
+
+            // readuce textul butonului după 2s
+            setTimeout(()=> { submitBtn.innerHTML = original; }, 2000);
+          }, 2500);
+        });
+      })();
+    </script>
 </body>
 
 </html>

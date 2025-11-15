@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Atracții turistice în Europa</title>
-
+    <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
+    <!-- Acest script rămâne în head -->
+    <script>
+        (function() 
+        {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') 
+            {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -31,6 +42,10 @@
                         <div class="container">
                             <nav>
                                 <ul>
+                                    <li id="buton_dark">
+                                        <input type="checkbox" id="dark-mode-toggle" />
+                                        <label for="dark-mode-toggle" class="toggle"></label>
+                                    </li>
                                     <li><a href="index.html">Prima pagină</a></li>
                                     <li class="dropdown"><a href="#">Obiective turistice</a>
                                         <ul class="dropdown-menu">
@@ -57,12 +72,12 @@
                 </div>
             </div>
         </header>
-        <section class="fullscreen background-overlay" data-bg-video="video/acropole.mp4">
+        <section class="fullscreen background-overlay" data-bg-video="video/peles.mp4">
             <div class="container-fluid">
                 <div class="container-fullscreen">
                     <div class="text-middle text-center text-light">
-                        <h1 class="text-lg">Acropolele din Atena</h1>
-                        <p class="lead">Stânca sacră a Greciei</p>
+                        <h1 class="text-lg">Castelul Peleș</h1>
+                        <p class="lead">Cel mai frumos castel din România</p>
                         
                     </div>
                 </div>
@@ -75,67 +90,60 @@
                 <div class="row m-b-40">
                     <div class="col-lg-10 center">
                         <div class="project-description text-center">
-                            <h2>Acropolele din Atena</h2>
+                            <h2>Castelul Peleș</h2>
 
-                            <p style="text-align: justify;">Amplasat deasupra orasului Atena, pe un deal stancos, <strong>Acropole</strong> sau, cum mai este cunoscuta, “<em>Stanca Sacra</em>” a Atenei, este una dintre cele mai populare monumente culturale ale lumii. Aceasta veche fortareata reprezinta cel mai semnificativ punct de referinta al culturii antice grecesti, dar si simbolul orasului Atena, fiind apogeul dezvoltarii artistice grecesti, realizat in secolul al V-lea i.H.</p>
+                            <p class="text-justify">Castelul din Valea Peleș reședința de vară a regilor României, a fost construit pe vremea regelui Carol I al României (1866 - 1914) și a devenit unul dintre cele mai importante monumente ale Europei secolului XIX. Pe terenul cumpărat de rege au fost construite pe lângă castel: Pelișorul, Corpul de Gardă, Economatul, Casa de Vânătoare Foișor, Grajdurile, Uzina Electrică, și Vila Șipot.</p>
 
-                            <p style="text-align: justify;">Intinzandu-se pe o suprafata de aproape 3 ha, Acropole este situata la o altitudine de 156 de metri deasupra vaii Ilissos, si intruchipeaza expresia suprema a adaptarii arhitecturii pe un loc natural. A fost locuita inca din neoliticul timpuriu (mileniul al VI-lea i.H.), iar in mileniul al II-lea i.H. functiona ca si o cetate ce proteja lacasurile de cult si palatele regale, fiind inconjurata de un zid – Pelasgicon, construit inaintea invaziilor doriene ce amenintau Atena la inceputul anilor 1200 i.H.</p>
+                            <p class="text-justify">Până la terminarea castelului (1883), Regele Carol I și Regina Elisabeta, au locuit la casa de vânătoare, terminată înaintea castelului. Având uzină electrică proprie Peleșul a fost primul castel electrificat din Europa. Prin amenajările de după 1900, reședința a fost supraînălțată cu un etaj, de asemenea și turnul principal. În forma sa finală, clădirea cu o suprafață de 3200 mp, are de 160 de camere și peste 30 de băi. În cele 160 de încăperi ale sale castelul a adăpostit una dintre cele mai importante colecții de tablouri din Europa și o bogată colecție de arme, cu peste 4000 de piese europene și orientale, din secolele XIV-XVII.</p>
 
-                            <p style="text-align: justify;">In timpul perioadei clasice (450-330 i.H.), Acropole a capatat infatisarea sa definitiva, cand au fost construite trei temple importante chiar si in ziua de azi: in centru se afla Parthenon-ul sau Templul Fecioarei Atena, mai la nord de acesta se gasea templul Erechtheion, in timp ce la sud de intrarea in cadrul fortaretei, se inalta Templul lui Nike. Tot in aceasta perioada a fost realizata si celebra poarta Propylaea, ce permite intrarea in Acropole. In partea de sud a Acropolei se gasesc astazi ruinele teatrului in aer liber, teatru cunoscut ca si Teatrul lui Dionisos, iar la doar cateva sute de metri se poate vedea Teatrul lui Herodes Atticus, un bogat aristocrat grec, acum partial reconstruit.</p>
+                            <p class="text-justify">Frumusețea și bogăția lemnăriei sculptate și vitraliile colorate obțin pe drept admirația vizitatorilor. Castelul Peleș se vizitează în procent de 35%. Holul de onorare, o sala de receptie realizată în anul 1911 de Karel Liman dintr-o fostă curte interioară este bogat ornamentată în lemn, și are acoperiș din vitralii. Sălile de arme au fost amenajate între anii 1903-1906, iar sala de consilii, bogată în intarsii în 1914.</p>
 
-                            <p style="text-align: justify;">In timpul dominatiei Imperiului Bizantin, templele existente au fost transformate in biserici, cum a fost si cazul Parthenon-ului, cand a devenit o biserica dedicata Fecioarei Maria. In anul 1204, dupa caderea Imperiul Bizantin, Acropole a devenit centrul administrativ al orasului Atena, iar Parthenonul catedrala sa, tot aici fiind construit si un turn de dimensiuni mari – Turnul Francilor, care a fost demolat abia in secolul al XIX-lea. Cand turcii au preluat orasul in anul 1456, acesta a devenit o moschee, Parthenon-ul fiind utilizat ca si sediu al armatei turcesti, iar Erechtheion-ul functiona ca si harem al guvernatorului turc.</p>
+                            <p class="text-justify">Sala Florentina, Marele Salon este decorat în stilul neorenașterii italiene. Sala de teatru în stilului Ludovic XIV are 60 de locuri și loja regală. Apartamentul imperial a fost amenajat in 1906, in stilul Maria Theresa pentru vizita împăratul Austro-Ungariei, Franz Josef.</p>
 
-                            <p style="text-align: justify;">Dupa eliberarea Atenei de sub dominatia Imperiului Otoman, protejarea, conservarea si restaurarea monumentelor a fost una dintre principalele sarcini ale noului stat grec, primele sapaturi arheologice din zona Acropole avand loc intre anii 1835-1837.</p>
-
-                            <p style="text-align: justify;">Toate artefactele antice de valoare sunt prezentate in cadrul Muzeului Acropole, amplasat pe panta sudica a dealului ce gazduieste intreg ansamblul de temple, la o distanta de 280 de metri de Templul Fecioarei Atena.</p>
-
-                            <p style="text-align: justify;">La data de 27 martie 2007, Acropole se gasea pe lista celor mai importante monumente ale Patrimoniul Cultural European.</p> 
-
-                        </div>
-
+                            <p class="text-justify">După abdicarea Regelui Mihai, în 1947, castelul Peleș a intrat în circuitul turistic, iar celelate clădiri au fost folosite de oamenii de cultură ai vremii. După ce în ultimii ani ai comunismului tot complexul era închis, astăzi doar Foișorul rămâne, reședință prezidențială. În Economat și Corpul de Gardă sunt amenajate hoteluri, restaurante iar celelate clădiri au devenit vile turistice, sau de protocol.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-8 center">
+                <div class="col-lg-10 center">
                     <div class="carousel carousel-promotion m-b-40" data-items="1" data-margin="40" data-loop="true" data-autoplay="true">
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/41.jpg" alt=""></a>
+                                    <a href="#"><img src="images/49.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/41.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/49.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/42.jpg" alt=""></a>
+                                    <a href="#"><img src="images/50.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/42.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/50.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/43.jpg" alt=""></a>
+                                    <a href="#"><img src="images/51.jpg" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/43.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/51.jpg" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
                         <div class="portfolio-item img-zoom">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/44.jpg" alt=""></a>
+                                    <a href="#"><img src="images/10.png" alt=""></a>
                                 </div>
                                 <div class="portfolio-description">
-                                    <a data-lightbox="image" href="images/44.jpg" class="btn btn-light btn-rounded">Zoom</a>
+                                    <a data-lightbox="image" href="images/10.png" class="btn btn-light btn-rounded">Zoom</a>
                                 </div>
                             </div>
                         </div>
@@ -201,6 +209,7 @@
     <script src="plugins/youtube-player/jquery.mb.YTPlayer.min.js"></script>
 
     <script src="js/functions.js"></script>
+    <script src="js/newfuture.js"></script>
 </body>
 
 </html>
