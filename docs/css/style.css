@@ -78,6 +78,7 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 section#carousel {
