@@ -105,44 +105,44 @@
                     </div>
                     <div class="slide" style="background-image: url('images/12.jpg')">
                         <div class="slide-content">
-                            <h3>Fiordurile norvegiene</h3>
-                            <p>Norvegia</p>
+                            <h3 id="slide_h3">Fiordurile norvegiene</h3>
+                            <p id="slide_p">Norvegia</p>
                         </div>
                     </div>
                     <div class="slide" style="background-image: url('images/4.jpg')">
                         <div class="slide-content">
-                            <h3>Turnul Eiffel</h3>
-                            <p>Paris</p>
+                            <h3 id="slide_h3">Turnul Eiffel</h3>
+                            <p id="slide_p">Paris</p>
                         </div>
                     </div>
                     <div class="slide" style="background-image: url('images/5.jpg')">
                         <div class="slide-content">
-                            <h3>Colosseum</h3>
-                            <p>Roma</p>
+                            <h3 id="slide_h3">Colosseum</h3>
+                            <p id="slide_p">Roma</p>
                         </div>
                     </div>
                     <div class="slide" style="background-image: url('images/7.jpg')">
                         <div class="slide-content">
-                            <h3>Castelul Neuschwanstein</h3>
-                            <p>Germania</p>
+                            <h3 id="slide_h3">Castelul Neuschwanstein</h3>
+                            <p id="slide_p">Germania</p>
                         </div>
                     </div>
                     <div class="slide" style="background-image: url('images/2.jpg')">
                         <div class="slide-content">
-                            <h3>Santorini</h3>
-                            <p>Grecia</p>
+                            <h3 id="slide_h3">Santorini</h3>
+                            <p id="slide_p">Grecia</p>
                         </div>
                     </div>
                     <div class="slide" style="background-image: url('images/52.jpg')">
                         <div class="slide-content">
-                            <h3>Catedrala Sfântul Vasile</h3>
-                            <p>Moscova</p>
+                            <h3 id="slide_h3">Catedrala Sfântul Vasile</h3>
+                            <p id="slide_p">Moscova</p>
                         </div>
                     </div>
                     <div class="slide" style="background-image: url('images/42.jpg')">
                         <div class="slide-content">
-                            <h3>Acropole</h3>
-                            <p>Grecia</p>
+                            <h3 id="slide_h3">Acropole</h3>
+                            <p id="slide_p">Grecia</p>
                         </div>
                     </div>
 
@@ -202,18 +202,15 @@
 
                 // Funcția de actualizare (rămâne la fel, dar setează poziția inițială corectă)
                 function updateSettings() {
-                    // 1. Obținem lățimea REALĂ a slide-ului
+                    // Obținem lățimea REALĂ a slide-ului
+                    // (care este valoarea calculată de 'calc()')
                     let slideRectWidth = slides[0].getBoundingClientRect().width;
 
                     // --- MODIFICARE CHEIE ---
-                    // Verificăm dacă suntem pe mobil SAU TABLETĂ (sub 1024px)
-                    if (window.innerWidth <= 1024) {
-                        // Pe mobil și tabletă, slide-ul are margin: 0
-                        slideWidth = slideRectWidth;
-                    } else {
-                        // Doar pe desktop (peste 1024px), adăugăm marginile
-                        slideWidth = slideRectWidth + 20;
-                    }
+                    // Deoarece TOATE slide-urile au acum 'margin: 0 10px',
+                    // lățimea de translație este ÎNTOTDEAUNA lățimea + 20px.
+
+                    slideWidth = slideRectWidth + 20;
                     // --- SFÂRȘIT MODIFICARE ---
 
                     // Restul funcției rămâne la fel

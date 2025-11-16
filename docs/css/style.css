@@ -203,17 +203,16 @@ section#carousel {
     margin: 0 10px;
   }
 }
-
-.slide {
-  flex: 0 0 100%;
-  height: 330px;
-
-  /* 2. MODIFICAT: Anulăm marginea pe mobil, deoarece 
-             padding-ul containerului face deja spațierea */
-  margin: 0;
+ 
+#slide_h3
+{
+  color: #ffffff;
 }
 
-
+#slide_p
+{
+  color: #ffffff;
+}
 
 
 /*zona in care lucrez eu */
