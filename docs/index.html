@@ -27,6 +27,15 @@
 
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Fix specific pentru pagina index:
+     Forțează header-ul să stea deasupra caruselului */
+        header {
+            position: relative;
+            z-index: 999;
+        }
+    </style>
+
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
 
     <!--    <link href="css/newfutre.css" rel="stylesheet"> -->
@@ -99,8 +108,8 @@
 
                     <div class="slide" style="background-image: url('images/3.jpg')">
                         <div class="slide-content">
-                            <h3>Sagrade Familia</h3>
-                            <p>Barcelona</p>
+                            <h3 id="slide_h3">Sagrade Familia</h3>
+                            <p id="slide_p">Barcelona</p>
                         </div>
                     </div>
                     <div class="slide" style="background-image: url('images/12.jpg')">
