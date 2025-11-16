@@ -8,21 +8,19 @@
     <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
     <!-- Acest script rămâne în head -->
     <script>
-        (function() 
-        {
+        (function () {
             const theme = localStorage.getItem('theme');
-            if (theme === 'dark') 
-            {
+            if (theme === 'dark') {
                 document.documentElement.classList.add('dark-mode');
             }
         })();
     </script>
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4J2QKFKKF"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-M4J2QKFKKF');
     </script>
@@ -33,144 +31,17 @@
 
     <!--    <link href="css/newfutre.css" rel="stylesheet"> -->
 
-    <link href="http://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet" property="stylesheet" type="text/css" media="all">
-    <link rel="stylesheet" type="text/css" href="plugins/slider-revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet" property="stylesheet"
+        type="text/css" media="all">
+    <link rel="stylesheet" type="text/css"
+        href="plugins/slider-revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
     <link rel="stylesheet" type="text/css" href="plugins/slider-revolution/fonts/font-awesome/css/font-awesome.css">
 
     <link rel="stylesheet" type="text/css" href="plugins/slider-revolution/css/settings.css">
 
 
-    <style type="text/css">
-        .tp-gradientstyle {
-            background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.83) 99%, rgba(0, 0, 0, 0.75) 100%);
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(99%, rgba(0, 0, 0, 0.83)), color-stop(100%, rgba(0, 0, 0, 0.75)));
-            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.83) 99%, rgba(0, 0, 0, 0.85) 100%);
-            background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.83) 99%, rgba(0, 0, 0, 0.75) 100%);
-            background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.83) 99%, rgba(0, 0, 0, 0.75) 100%);
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.83) 99%, rgba(0, 0, 0, 0.75) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#d9000000', GradientType=0)
-        }
-    </style>
-    <style type="text/css">
-        .gyges .tp-thumb {
-            opacity: 1
-        }
 
-        .gyges .tp-thumb-img-wrap {
-            padding: 3px;
-            background-color: rgba(17, 17, 17, 1);
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-            position: relative;
-            margin: 0px;
-            box-sizing: border-box;
-            transition: all 0.3s;
-            -webkit-transition: all 0.3s
-        }
 
-        .gyges .tp-thumb-image {
-            padding: 3px;
-            display: block;
-            box-sizing: border-box;
-            position: relative;
-            -webkit-box-shadow: inset 5px 5px 10px 0px rgba(17, 17, 17, 1);
-            -moz-box-shadow: inset 5px 5px 10px 0px rgba(17, 17, 17, 1);
-            box-shadow: inset 5px 5px 10px 0px rgba(17, 17, 17, 1)
-        }
-
-        .gyges .tp-thumb:hover .tp-thumb-img-wrap,
-        .gyges .tp-thumb.selected .tp-thumb-img-wrap {
-            background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
-            background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-            background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-            background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%)
-        }
-
-        .gyges .tp-tab {
-            opacity: 1;
-            padding: 10px;
-            box-sizing: border-box;
-            font-family: "roboto", sans-serif;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15)
-        }
-
-        .gyges .tp-tab-image {
-            width: 60px;
-            height: 60px;
-            max-height: 100%;
-            max-width: 100%;
-            position: relative;
-            display: inline-block;
-            float: left
-        }
-
-        .gyges .tp-tab-content {
-            background: rgba(0, 0, 0, 0);
-            position: relative;
-            padding: 15px 15px 15px 85px;
-            left: 0px;
-            overflow: hidden;
-            margin-top: -15px;
-            box-sizing: border-box;
-            color: rgba(51, 51, 51, 0);
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-            position: absolute
-        }
-
-        .gyges .tp-tab-date {
-            display: block;
-            color: rgba(255, 255, 255, 0.5);
-            font-weight: 500;
-            font-size: 12px;
-            margin-bottom: 0px
-        }
-
-        .gyges .tp-tab-title {
-            display: block;
-            text-align: left;
-            color: rgba(255, 255, 255, 1);
-            font-size: 14px;
-            font-weight: 500;
-            text-transform: none;
-            line-height: 17px
-        }
-
-        .gyges .tp-tab:hover,
-        .gyges .tp-tab.selected {
-            background: rgba(0, 0, 0, 0.51)
-        }
-
-        .gyges .tp-tab-mask {
-			background: rgba(0, 0, 0, 0.7);
-		}
-		
-		.tp-caption {
-			color: white !important;
-			text-shadow: 2px 2px 4px #000000 !important;
-		}
-
-        @media only screen and (max-width:960px) {}
-
-        @media only screen and (max-width:768px) {}
-    </style>
-
-    <script type="text/javascript" src="plugins/slider-revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="plugins/slider-revolution/js/jquery.themepunch.revolution.min.js"></script>
-
-    <script type="text/javascript" src="plugins/slider-revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="plugins/slider-revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script type="text/javascript" src="plugins/slider-revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="plugins/slider-revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="plugins/slider-revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script type="text/javascript" src="plugins/slider-revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="plugins/slider-revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="plugins/slider-revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="plugins/slider-revolution/js/extensions/revolution.extension.video.min.js"></script>
 </head>
 
 <body>
@@ -189,7 +60,7 @@
                     </div>
                     <div id="mainMenu">
                         <div class="container">
-                            <nav>   
+                            <nav>
                                 <ul>
                                     <li id="buton_dark">
                                         <input type="checkbox" id="dark-mode-toggle" />
@@ -222,205 +93,243 @@
             </div>
         </header>
 
-        <section id="slider">
-            <div id="rev_slider_18_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="carousel-gallery" data-source="gallery" style="margin:0px auto;background:#000000;padding:0px;margin-top:0px;margin-bottom:0px;">
-                <div id="rev_slider_18_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
-                    <ul>
-                        <li data-index="rs-41" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="images/3.jpg" data-rotate="0" data-saveperformance="off" data-title="Sagrada Familia" data-param1="Barcelona" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/3.jpg" alt="" data-lazyload="images/3.jpg" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 1 -->
-                            <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme  tp-gradientstyle" id="slide-41-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" data-width="full" data-height="['200','200','200','250']" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:50px;opacity:0;","speed":2000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;"> </div>
-                            <!-- LAYER NR. 2 -->
-                            <a class="tp-caption   tp-resizeme" href="#" target="_self" id="slide-41-layer-1" data-x="['left','left','left','left']" data-hoffset="['40','40','30','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['90','90','79','99']" data-fontsize="['40','40','25','20']" data-lineheight="['40','40','25','20']" data-width="['580','480','340','260']" data-height="none" data-whitespace="normal" data-type="text" data-actions='' data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:20px;opacity:0;","speed":2000,"to":"o:1;","delay":200,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 580px; max-width: 580px; white-space: normal; font-size: 40px; line-height: 40px; font-weight: 500; color: rgba(255,255,255,1);font-family:Roboto;text-decoration: none;">Sagrada Familia </a>
-                            <!-- LAYER NR. 4 -->
-                            <div class="tp-caption   tp-resizeme tp-svg-layer" id="slide-41-layer-4" data-x="['left','left','left','left']" data-hoffset="['721','620','510','367']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['29','29','9','16']" data-width="50" data-height="50" data-whitespace="nowrap" data-visibility="['on','on','off','off']" data-type="svg" data-actions='[{"event":"click","action":"togglefullscreen","delay":""}]' data-svg_src="plugins/slider-revolution/assets/images/ic_fullscreen_24px.svg" data-svg_idle="sc:transparent;sw:0;sda:0;sdo:0;" data-svg_hover="sc:transparent;sw:0;sda:0;sdo:0;" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:20px;opacity:0;","speed":2000,"to":"o:1;","delay":600,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"150","ease":"Power2.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; color: rgba(255,255,255,0.50);cursor:pointer;">
-                                <div class="rs-untoggled-content"> </div>
-                                <div class="rs-toggled-content"></div>
-                            </div>
-                        </li>
-                        <!-- SLIDE  -->
-                        <li data-index="rs-42" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="images/12.jpg" data-rotate="0" data-saveperformance="off" data-title="Fiordurile norvegiene" data-param1="Norvegia" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/12.jpg" alt="" data-lazyload="images/12.jpg" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 5 -->
-                            <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme  tp-gradientstyle" id="slide-42-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" data-width="full" data-height="['200','200','200','250']" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:50px;opacity:0;","speed":2000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9;"> </div>
-                            <!-- LAYER NR. 6 -->
-                            <a class="tp-caption   tp-resizeme" href="#" target="_self" id="slide-42-layer-1" data-x="['left','left','left','left']" data-hoffset="['40','40','30','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['91','91','98','120']" data-fontsize="['40','40','25','20']" data-lineheight="['40','40','25','20']" data-width="['580','480','340','260']" data-height="none" data-whitespace="normal" data-type="text" data-actions='' data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:20px;opacity:0;","speed":2000,"to":"o:1;","delay":200,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10; min-width: 580px; max-width: 580px; white-space: normal; font-size: 40px; line-height: 40px; font-weight: 500; color: rgba(255,255,255,1);font-family:Roboto;text-decoration: none;">Fiordurile Norvegiei </a>
-                            <!-- LAYER NR. 8 -->
-                            <div class="tp-caption   tp-resizeme tp-svg-layer" id="slide-42-layer-4" data-x="['left','left','left','left']" data-hoffset="['721','620','510','367']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['29','29','9','16']" data-width="50" data-height="50" data-whitespace="nowrap" data-visibility="['on','on','off','off']" data-type="svg" data-actions='[{"event":"click","action":"togglefullscreen","delay":""}]' data-svg_src="plugins/slider-revolution/assets/images/ic_fullscreen_24px.svg" data-svg_idle="sc:transparent;sw:0;sda:0;sdo:0;" data-svg_hover="sc:transparent;sw:0;sda:0;sdo:0;" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:20px;opacity:0;","speed":2000,"to":"o:1;","delay":600,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"150","ease":"Power2.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 12; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; color: rgba(255,255,255,0.50);cursor:pointer;">
-                                <div class="rs-untoggled-content"> </div>
-                                <div class="rs-toggled-content"></div>
-                            </div>
-                        </li>
-                        <!-- SLIDE  -->
-                        <li data-index="rs-43" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="images/4.jpg" data-rotate="0" data-saveperformance="off" data-title="Turnul Eiffel" data-param1="Paris" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/4.jpg" alt="" data-lazyload="images/4.jpg" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 9 -->
-                            <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme  tp-gradientstyle" id="slide-43-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" data-width="full" data-height="['200','200','200','250']" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:50px;opacity:0;","speed":2000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 13;"> </div>
-                            <!-- LAYER NR. 10 -->
-                            <a class="tp-caption   tp-resizeme" href="#" target="_self" id="slide-43-layer-1" data-x="['left','left','left','left']" data-hoffset="['40','40','30','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['90','111','119','140']" data-fontsize="['40','40','25','20']" data-lineheight="['40','40','25','20']" data-width="['580','480','340','260']" data-height="none" data-whitespace="normal" data-type="text" data-actions='' data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:20px;opacity:0;","speed":2000,"to":"o:1;","delay":200,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 14; min-width: 580px; max-width: 580px; white-space: normal; font-size: 40px; line-height: 40px; font-weight: 500; color: rgba(255,255,255,1);font-family:Roboto;text-decoration: none;">Turnul Eiffel </a>
-                            <div class="tp-caption   tp-resizeme tp-svg-layer" id="slide-43-layer-4" data-x="['left','left','left','left']" data-hoffset="['721','620','510','367']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['29','29','9','16']" data-width="50" data-height="50" data-whitespace="nowrap" data-visibility="['on','on','off','off']" data-type="svg" data-actions='[{"event":"click","action":"togglefullscreen","delay":""}]' data-svg_src="plugins/slider-revolution/assets/images/ic_fullscreen_36px.svg" data-svg_idle="sc:transparent;sw:0;sda:0;sdo:0;" data-svg_hover="sc:transparent;sw:0;sda:0;sdo:0;" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:20px;opacity:0;","speed":2000,"to":"o:1;","delay":600,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"150","ease":"Power2.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 16; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; color: rgba(255,255,255,0.50);cursor:pointer;">
-                                <div class="rs-untoggled-content"> </div>
-                                <div class="rs-toggled-content"></div>
-                            </div>
-                        </li>
-                        <!-- SLIDE  -->
-                        <li data-index="rs-44" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="images/5.jpg" data-rotate="0" data-saveperformance="off" data-title="Colosseum" data-param1="Roma" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/5.jpg" alt="" data-lazyload="images/5.jpg" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 13 -->
-                            <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme  tp-gradientstyle" id="slide-44-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" data-width="full" data-height="['200','200','200','250']" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:50px;opacity:0;","speed":2000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 17;"> </div>
-                            <!-- LAYER NR. 14 -->
-                            <a class="tp-caption   tp-resizeme" href="#" target="_self" id="slide-44-layer-1" data-x="['left','left','left','left']" data-hoffset="['40','40','30','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['111','111','119','140']" data-fontsize="['40','40','25','20']" data-lineheight="['40','40','25','20']" data-width="['580','480','340','260']" data-height="none" data-whitespace="normal" data-type="text" data-actions='' data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:20px;opacity:0;","speed":2000,"to":"o:1;","delay":200,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 18; min-width: 580px; max-width: 580px; white-space: normal; font-size: 40px; line-height: 40px; font-weight: 500; color: rgba(255,255,255,1);font-family:Roboto;text-decoration: none;">Colosseum</a>
-                            <div class="tp-caption   tp-resizeme tp-svg-layer" id="slide-44-layer-4" data-x="['left','left','left','left']" data-hoffset="['721','620','510','367']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['29','29','9','16']" data-width="50" data-height="50" data-whitespace="nowrap" data-visibility="['on','on','off','off']" data-type="svg" data-actions='[{"event":"click","action":"togglefullscreen","delay":""}]' data-svg_src="plugins/slider-revolution/assets/images/ic_fullscreen_36px.svg" data-svg_idle="sc:transparent;sw:0;sda:0;sdo:0;" data-svg_hover="sc:transparent;sw:0;sda:0;sdo:0;" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:20px;opacity:0;","speed":2000,"to":"o:1;","delay":600,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"150","ease":"Power2.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 20; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; color: rgba(255,255,255,0.50);cursor:pointer;">
-                                <div class="rs-untoggled-content"> </div>
-                                <div class="rs-toggled-content"></div>
-                            </div>
-                        </li>
-                        <!-- SLIDE  -->
-                        <li data-index="rs-45" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="images/7.jpg" data-rotate="0" data-saveperformance="off" data-title="Castelul Neuschwanstein" data-param1="Germania" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/7.jpg" alt="" data-lazyload="images/7.jpg" data-bgposition="center center" data-bgfit="cover" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- BACKGROUND VIDEO LAYER -->
-                            <div class="rs-background-video-layer" data-forcerewind="on" data-volume="mute" data-videowidth="100%" data-videoheight="100%" data-videomp4="plugins/slider-revolution/assets/videos/sunrise.mp4" data-videopreload="auto" data-videoloop="loopandnoslidestop" data-forceCover="1" data-aspectratio="16:9" data-autoplay="true" data-autoplayonlyfirsttime="false"></div>
-                            <!-- LAYER NR. 17 -->
-                            <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme  tp-gradientstyle" id="slide-45-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" data-width="full" data-height="['200','200','200','250']" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:50px;opacity:0;","speed":2000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 21;"> </div>
-                            <!-- LAYER NR. 18 -->
-                            <a class="tp-caption   tp-resizeme" href="#" target="_self" id="slide-45-layer-1" data-x="['left','left','left','left']" data-hoffset="['40','40','30','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['91','91','99','100']" data-fontsize="['40','40','25','20']" data-lineheight="['40','40','25','20']" data-width="['580','480','340','260']" data-height="none" data-whitespace="normal" data-type="text" data-actions='' data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:20px;opacity:0;","speed":2000,"to":"o:1;","delay":200,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 22; min-width: 580px; max-width: 580px; white-space: normal; font-size: 40px; line-height: 40px; font-weight: 500; color: rgba(255,255,255,1);font-family:Roboto;text-decoration: none;">Castelul Neuschwanstein </a>
-                            <div class="tp-caption   tp-resizeme tp-svg-layer" id="slide-45-layer-4" data-x="['left','left','left','left']" data-hoffset="['721','620','510','367']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['29','29','9','16']" data-width="50" data-height="50" data-whitespace="nowrap" data-visibility="['on','on','off','off']" data-type="svg" data-actions='[{"event":"click","action":"togglefullscreen","delay":""}]' data-svg_src="plugins/slider-revolution/assets/images/ic_fullscreen_36px.svg" data-svg_idle="sc:transparent;sw:0;sda:0;sdo:0;" data-svg_hover="sc:transparent;sw:0;sda:0;sdo:0;" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:20px;opacity:0;","speed":2000,"to":"o:1;","delay":600,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"150","ease":"Power2.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 24; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; color: rgba(255,255,255,0.50);cursor:pointer;">
-                                <div class="rs-untoggled-content"> </div>
-                                <div class="rs-toggled-content"></div>
-                            </div>
-                        </li>
-                        <!-- SLIDE  -->
-                        <li data-index="rs-46" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="images/2.jpg" data-rotate="0" data-saveperformance="off" data-title="Santorini" data-param1="Grecia" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/2.jpg" alt="" data-lazyload="images/2.jpg" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 21 -->
-                            <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme  tp-gradientstyle" id="slide-46-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" data-width="full" data-height="['200','200','200','250']" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:50px;opacity:0;","speed":2000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 25;"> </div>
-                            <!-- LAYER NR. 22 -->
-                            <a class="tp-caption   tp-resizeme" href="#" target="_self" id="slide-46-layer-1" data-x="['left','left','left','left']" data-hoffset="['40','40','30','20']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['91','91','79','100']" data-fontsize="['40','40','25','20']" data-lineheight="['40','40','25','20']" data-width="['580','480','340','260']" data-height="none" data-whitespace="normal" data-type="text" data-actions='' data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:20px;opacity:0;","speed":2000,"to":"o:1;","delay":200,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 26; min-width: 580px; max-width: 580px; white-space: normal; font-size: 40px; line-height: 40px; font-weight: 500; color: rgba(255,255,255,1);font-family:Roboto;text-decoration: none;">Santorini </a>
-                            <div class="tp-caption   tp-resizeme tp-svg-layer" id="slide-46-layer-4" data-x="['left','left','left','left']" data-hoffset="['721','620','510','367']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['29','29','9','16']" data-width="50" data-height="50" data-whitespace="nowrap" data-visibility="['on','on','off','off']" data-type="svg" data-actions='[{"event":"click","action":"togglefullscreen","delay":""}]' data-svg_src="plugins/slider-revolution/assets/images/ic_fullscreen_36px.svg" data-svg_idle="sc:transparent;sw:0;sda:0;sdo:0;" data-svg_hover="sc:transparent;sw:0;sda:0;sdo:0;" data-basealign="slide" data-responsive_offset="on" data-frames='[{"from":"y:20px;opacity:0;","speed":2000,"to":"o:1;","delay":600,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"150","ease":"Power2.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 28; min-width: 50px; max-width: 50px; max-width: 50px; max-width: 50px; color: rgba(255,255,255,0.50);cursor:pointer;">
-                                <div class="rs-untoggled-content"> </div>
-                                <div class="rs-toggled-content"></div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="tp-bannertimer" style="height: 8px; background: rgba(255,255,255,0.25);"></div>
+        <section id="carousel">
+            <div class="carousel-wrapper">
+                <div class="carousel-track">
+
+                    <div class="slide" style="background-image: url('images/3.jpg')">
+                        <div class="slide-content">
+                            <h3>Sagrade Familia</h3>
+                            <p>Barcelona</p>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('images/12.jpg')">
+                        <div class="slide-content">
+                            <h3>Fiordurile norvegiene</h3>
+                            <p>Norvegia</p>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('images/4.jpg')">
+                        <div class="slide-content">
+                            <h3>Turnul Eiffel</h3>
+                            <p>Paris</p>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('images/5.jpg')">
+                        <div class="slide-content">
+                            <h3>Colosseum</h3>
+                            <p>Roma</p>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('images/7.jpg')">
+                        <div class="slide-content">
+                            <h3>Castelul Neuschwanstein</h3>
+                            <p>Germania</p>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('images/2.jpg')">
+                        <div class="slide-content">
+                            <h3>Santorini</h3>
+                            <p>Grecia</p>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('images/52.jpg')">
+                        <div class="slide-content">
+                            <h3>Catedrala Sfântul Vasile</h3>
+                            <p>Moscova</p>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('images/42.jpg')">
+                        <div class="slide-content">
+                            <h3>Acropole</h3>
+                            <p>Grecia</p>
+                        </div>
+                    </div>
+
                 </div>
-            </div><!-- END REVOLUTION SLIDER -->
-            <script type="text/javascript">
-                var tpj = jQuery;
-                var revapi18;
-                tpj(document).ready(function () {
-                    if (tpj("#rev_slider_18_1").revolution == undefined) {
-                        revslider_showDoubleJqueryError("#rev_slider_18_1");
-                    } else {
-                        revapi18 = tpj("#rev_slider_18_1").show().revolution({
-                            sliderType: "carousel",
-                            jsFileLocation: "plugins/slider-revolution/js/",
-                            sliderLayout: "fullwidth",
-                            dottedOverlay: "none",
-                            delay: 9000,
-                            navigation: {
-                                keyboardNavigation: "off",
-                                keyboard_direction: "horizontal",
-                                mouseScrollNavigation: "off",
-                                mouseScrollReverse: "default",
-                                onHoverStop: "on",
-                                thumbnails: {
-                                    style: "gyges",
-                                    enable: true,
-                                    width: 50,
-                                    height: 50,
-                                    min_width: 50,
-                                    wrapper_padding: 5,
-                                    wrapper_color: "transparent",
-                                    tmp: '<span class="tp-thumb-img-wrap">  <span class="tp-thumb-image"></span></span>',
-                                    visibleAmount: 5,
-                                    hide_onmobile: false,
-                                    hide_over: 1240,
-                                    hide_onleave: false,
-                                    direction: "horizontal",
-                                    span: false,
-                                    position: "inner",
-                                    space: 5,
-                                    h_align: "center",
-                                    v_align: "top",
-                                    h_offset: 0,
-                                    v_offset: 20
-                                },
-                                tabs: {
-                                    style: "gyges",
-                                    enable: true,
-                                    width: 220,
-                                    height: 80,
-                                    min_width: 220,
-                                    wrapper_padding: 0,
-                                    wrapper_color: "transparent",
-                                    tmp: '<div class="tp-tab-content">  <span class="tp-tab-date">{{param1}}</span>  <span class="tp-tab-title">{{title}}</span></div><div class="tp-tab-image"></div>',
-                                    visibleAmount: 6,
-                                    hide_onmobile: true,
-                                    hide_under: 1240,
-                                    hide_onleave: false,
-                                    hide_delay: 200,
-                                    direction: "vertical",
-                                    span: true,
-                                    position: "inner",
-                                    space: 0,
-                                    h_align: "left",
-                                    v_align: "center",
-                                    h_offset: 0,
-                                    v_offset: 0
-                                }
-                            },
-                            carousel: {
-                                horizontal_align: "center",
-                                vertical_align: "center",
-                                fadeout: "off",
-                                maxVisibleItems: 5,
-                                infinity: "on",
-                                space: 0,
-                                stretch: "off",
-                                showLayersAllTime: "off",
-                                easing: "Power3.easeInOut",
-                                speed: "800"
-                            },
-                            responsiveLevels: [1240, 1024, 778, 480],
-                            visibilityLevels: [1240, 1024, 778, 480],
-                            gridwidth: [800, 700, 400, 300],
-                            gridheight: [600, 600, 500, 400],
-                            lazyType: "single",
-                            shadow: 0,
-                            spinner: "off",
-                            stopLoop: "off",
-                            stopAfterLoops: -1,
-                            stopAtSlide: -1,
-                            shuffle: "off",
-                            autoHeight: "off",
-                            hideThumbsOnMobile: "off",
-                            hideSliderAtLimit: 0,
-                            hideCaptionAtLimit: 0,
-                            hideAllCaptionAtLilmit: 0,
-                            debugMode: false,
-                            fallbacks: {
-                                simplifyAll: "off",
-                                nextSlideOnWindowFocus: "off",
-                                disableFocusListener: false,
-                            }
-                        });
-                    }
-                }); /*ready*/
-            </script>
+            </div>
         </section>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const track = document.querySelector(".carousel-track");
+                const slides = Array.from(document.querySelectorAll(".slide"));
+
+                // --- MODIFICARE CHEIE ---
+                // Definim câte slide-uri sunt vizibile pe desktop.
+                // Vom clona atâtea slide-uri la fiecare capăt.
+                const slidesToClone = 3;
+                // --- SFÂRȘIT MODIFICARE ---
+
+                let autoplay;
+                let isDragging = false;
+                let startX = 0;
+                let currentTranslate = 0;
+                let prevTranslate = 0;
+
+                // --- MODIFICARE LOGICĂ DE CLONARE ---
+                // 1. Clonăm primele 'slidesToClone' și le punem la FINAL
+                for (let i = 0; i < slidesToClone; i++) {
+                    // Folosim modulo (%) pentru siguranță, în caz că ai mai puține slide-uri decât 3
+                    let slideIndex = i % slides.length;
+                    const clone = slides[slideIndex].cloneNode(true);
+                    clone.classList.add("clone", "clone-first");
+                    track.appendChild(clone);
+                }
+
+                // 2. Clonăm ultimele 'slidesToClone' și le punem la ÎNCEPUT
+                // Mergem în ordine inversă pentru a le insera corect
+                for (let i = slides.length - 1; i >= slides.length - slidesToClone; i--) {
+                    let slideIndex = i % slides.length;
+                    if (slideIndex < 0) slideIndex += slides.length; // Corecție pt index negativ
+
+                    const clone = slides[slideIndex].cloneNode(true);
+                    clone.classList.add("clone", "clone-last");
+                    track.insertBefore(clone, track.firstChild); // Inserăm la începutul 'track'-ului
+                }
+                // --- SFÂRȘIT MODIFICARE LOGICĂ DE CLONARE ---
+
+
+                let allSlides = document.querySelectorAll(".slide");
+
+                // --- MODIFICARE CHEIE ---
+                // Index-ul acum trebuie să înceapă de la primul slide REAL
+                // (am adăugat 'slidesToClone' la început)
+                let index = slidesToClone;
+                // --- SFÂRȘIT MODIFICARE ---
+
+                let slideWidth;
+
+                // Funcția de actualizare (rămâne la fel, dar setează poziția inițială corectă)
+                function updateSettings() {
+                    // 1. Obținem lățimea REALĂ a slide-ului
+                    let slideRectWidth = slides[0].getBoundingClientRect().width;
+
+                    // --- MODIFICARE CHEIE ---
+                    // Verificăm dacă suntem pe mobil SAU TABLETĂ (sub 1024px)
+                    if (window.innerWidth <= 1024) {
+                        // Pe mobil și tabletă, slide-ul are margin: 0
+                        slideWidth = slideRectWidth;
+                    } else {
+                        // Doar pe desktop (peste 1024px), adăugăm marginile
+                        slideWidth = slideRectWidth + 20;
+                    }
+                    // --- SFÂRȘIT MODIFICARE ---
+
+                    // Restul funcției rămâne la fel
+                    track.style.transition = "none";
+                    currentTranslate = -slideWidth * index;
+                    prevTranslate = currentTranslate;
+                    track.style.transform = `translateX(${currentTranslate}px)`;
+                }
+
+                function startAutoplay() {
+                    clearInterval(autoplay);
+                    autoplay = setInterval(() => {
+                        index++;
+                        moveSlider();
+                    }, 4000);
+                }
+
+                function stopAutoplay() {
+                    clearInterval(autoplay);
+                }
+
+                function moveSlider(snapToIndex = true) {
+                    track.style.transition = "transform 0.6s ease-in-out";
+                    if (snapToIndex) {
+                        currentTranslate = -slideWidth * index;
+                    }
+                    track.style.transform = `translateX(${currentTranslate}px)`;
+                    prevTranslate = currentTranslate;
+                }
+
+                // --- MODIFICARE CHEIE: Logica de 'transitionend' pentru loop ---
+                track.addEventListener("transitionend", () => {
+                    allSlides = document.querySelectorAll(".slide"); // Re-actualizăm lista
+
+                    // Verificăm dacă am ajuns la clonele de la FINAL
+                    // Indexul primei clone de la final este (nr_reale + nr_clone_la_inceput)
+                    // Exemplu: 8 reale + 3 clone = 11. Când index ajunge la 11 (prima clonă-first)...
+                    if (index >= (slides.length + slidesToClone)) {
+                        track.style.transition = "none";
+                        index = slidesToClone; // Salt la primul slide real (index 3)
+                        currentTranslate = -slideWidth * index;
+                        prevTranslate = currentTranslate;
+                        track.style.transform = `translateX(${currentTranslate}px)`;
+                    }
+
+                    // Verificăm dacă am ajuns la clonele de la ÎNCEPUT (la swipe dreapta)
+                    // Când index = 3 (primul real) și dăm swipe dreapta, index devine 2
+                    // allSlides[2] este o clonă "clone-last"
+                    if (index < slidesToClone) {
+                        track.style.transition = "none";
+                        // Sărim la ultimul slide real corespunzător
+                        // index = 2 (clona lui slide 8) -> vrem să sărim la index 10 (slide 8 real)
+                        // index = 1 (clona lui slide 7) -> vrem să sărim la index 9 (slide 7 real)
+                        // Logica: index = index + numărul de slide-uri reale
+                        index = index + slides.length;
+
+                        currentTranslate = -slideWidth * index;
+                        prevTranslate = currentTranslate;
+                        track.style.transform = `translateX(${currentTranslate}px)`;
+                    }
+                });
+                // --- SFÂRȘIT MODIFICARE 'transitionend' ---
+
+                // --- Logica SWIPE (Rămâne neschimbată) ---
+                function dragStart(e) {
+                    isDragging = true;
+                    startX = (e.type === "touchstart") ? e.touches[0].clientX : e.clientX;
+                    stopAutoplay();
+                    track.style.transition = "none";
+                }
+
+                function dragMove(e) {
+                    if (!isDragging) return;
+                    let currentX = (e.type === "touchmove") ? e.touches[0].clientX : e.clientX;
+                    let diff = currentX - startX;
+                    currentTranslate = prevTranslate + diff;
+                    track.style.transform = `translateX(${currentTranslate}px)`;
+                }
+
+                function dragEnd(e) {
+                    if (!isDragging) return;
+                    isDragging = false;
+
+                    let finalX = (e.type === "touchend") ? e.changedTouches[0].clientX : e.clientX;
+                    let diff = finalX - startX;
+
+                    if (Math.abs(diff) > 80) {
+                        if (diff < 0) {
+                            index++;
+                        } else {
+                            index--;
+                        }
+                    }
+
+                    moveSlider(true);
+                    startAutoplay();
+                }
+
+                // Aplicare evenimente Mouse
+                track.addEventListener("mousedown", dragStart);
+                track.addEventListener("mousemove", dragMove);
+                window.addEventListener("mouseup", dragEnd);
+                track.addEventListener("mouseleave", dragEnd);
+
+                // Aplicare evenimente Touch
+                track.addEventListener("touchstart", dragStart);
+                track.addEventListener("touchmove", dragMove);
+                track.addEventListener("touchend", dragEnd);
+                // --- SFÂRȘIT LOGICĂ SWIPE ---
+
+                // --- INIȚIALIZARE (Rămâne neschimbată) ---
+                updateSettings();
+                window.addEventListener('resize', updateSettings);
+                startAutoplay();
+            });
+        </script>
 
         <footer id="footer">
             <div class="footer-content">
