@@ -261,7 +261,7 @@ section#carousel {
   width: 22px;
   /* Echivalentul font-size: 22px din codul vechi */
   height: 22px;
-  fill: currentColor;
+  /*fill: currentColor;*/
   /* Preia culoarea textului definită în .icon */
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
