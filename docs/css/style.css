@@ -203,17 +203,164 @@ section#carousel {
     /* Păstrăm marginile pentru spațiere */
     margin: 0 10px;
   }
+
+  #slide_h3 {
+    font-size: 1.5rem;
+  }
+
+  #mobile1 {
+    margin-bottom: 0px;
+  }
+
+  #mobile2 {
+    margin-bottom: 0px;
+  }
+
+  div #mobile2 {
+    width: 0px;
+    height: 0px
+  }
+
+  ;
 }
- 
-#slide_h3
-{
+
+#slide_h3 {
   color: #ffffff;
 }
 
-#slide_p
-{
+#slide_p {
   color: #ffffff;
 }
+
+/*Social Media*/
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  /* Modificare: Folosim Flexbox pentru centrare perfectă a SVG-ului */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 11px 4px color-mix(in srgb, var(--text-color), transparent 90%);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #333;
+  text-decoration: none;
+}
+
+/* Stiluri noi pentru SVG-uri */
+.wrapper .icon svg {
+  width: 22px;
+  /* Echivalentul font-size: 22px din codul vechi */
+  height: 22px;
+  fill: currentColor;
+  /* Preia culoarea textului definită în .icon */
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  line-height: 1.5;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333;
+  /* Tooltip text color fix */
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* Centrare tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Hover Colors & SVG Fill Update */
+/* --- FACEBOOK --- */
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff !important;
+  /* Forțăm culoarea albă */
+  fill: #ffffff !important;
+  /* Forțăm umplerea SVG-ului cu alb */
+}
+
+/* --- TWITTER (X) --- */
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #000000;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* --- INSTAGRAM --- */
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* --- GITHUB --- */
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* --- YOUTUBE --- */
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+.container_media {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
+}
+
 
 
 /*zona in care lucrez eu */
@@ -1646,9 +1793,9 @@ Topbar
 -webkit-backface-visibility: hidden; */
   left: 0;
   right: 0;
-  -webkit-transition: all .4s ease-in-out;
+  /*-webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-  /*logo*/
+  logo*/
 }
 
 #header .header-inner #logo,
@@ -9680,7 +9827,7 @@ Helpers
 }
 
 #footer a:not(.btn) {
-  color: var(--text-color);
+  /*color: var(--text-color);*/
 }
 
 #footer p {
@@ -18766,7 +18913,7 @@ screen and (max-height: 300px) {
 }
 
 .list li a {
-  color: #484848;
+  color: var(--text-color);
 }
 
 .list-lines,
