@@ -361,6 +361,30 @@ section#carousel {
   margin-left: auto
 }
 
+@media (min-width: 1200px)
+{
+  .row{
+    margin-right: -60px !important;
+    margin-left: 40px !important;
+  }
+}
+
+/* --- TABLETĂ: ADEVĂRATA SOLUȚIE --- */
+@media (min-width: 769px) and (max-width: 1024px)
+{    
+  .row{
+    margin-right: -8px !important;
+    margin-left: -8px !important;
+  }
+}
+
+
+/* --- TELEFON: ADEVĂRATA SOLUȚIE --- */
+@media (max-width: 768px)
+{
+
+}
+
 /*zona in care lucrez eu */
 html {
   overflow-x: hidden;

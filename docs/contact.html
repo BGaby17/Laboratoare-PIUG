@@ -9,11 +9,9 @@
     <link rel="icon" href="images/european.png" type="image/png" sizes="16x16">
     <!-- Acest script rămâne în head -->
     <script>
-        (function() 
-        {
+        (function () {
             const theme = localStorage.getItem('theme');
-            if (theme === 'dark') 
-            {
+            if (theme === 'dark') {
                 document.documentElement.classList.add('dark-mode');
             }
         })();
@@ -21,59 +19,147 @@
 
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-      <style>
-    /* poziționare iconiță eroare și wrapper pentru input */
-    .form-group{ position: relative; }
-    .form-group .form-control{ padding-right: 48px; box-sizing: border-box; }
+    <style>
+        /* poziționare iconiță eroare și wrapper pentru input */
+        .form-group {
+            position: relative;
+        }
 
-    .error-icon{
-      position: absolute;
-      right: 24px;
-      top: 53%;
-      transform: translateY(-50%);
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #ff4d4f;
-      color: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      cursor: pointer;
-      z-index: 10;
-      border: none;
-    }
+        .form-group .form-control {
+            padding-right: 48px;
+            box-sizing: border-box;
+        }
 
-    textarea + .error-icon,
-    .form-group textarea.form-control + .error-icon{
-      right: 8px;
-      top: 45px;
-    }
+        .error-icon {
+            position: absolute;
+            right: 24px;
+            top: 53%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ff4d4f;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            cursor: pointer;
+            z-index: 10;
+            border: none;
+        }
 
-    .error-text{
-      display: none;
-      color: #ff4d4f;
-      font-size: 13px;
-      margin-top: 6px;
-      line-height: 1.2;
-    }
+        textarea+.error-icon,
+        .form-group textarea.form-control+.error-icon {
+            right: 8px;
+            top: 45px;
+        }
 
-    /* când e setată clasa show-error arătăm textul (utile pe mobil) */
-    .form-group.show-error .error-text { display: block; }
-    .form-group.show-error .form-control { box-shadow: 0 0 0 3px rgba(255,77,79,0.06) inset; }
+        .error-text {
+            display: none;
+            color: #ff4d4f;
+            font-size: 13px;
+            margin-top: 6px;
+            line-height: 1.2;
+        }
 
-    .invalid { /* păstrează clasa pentru stil suplimentar */ }
-    .sending { opacity: 0.8; pointer-events: none; }
+        /* când e setată clasa show-error arătăm textul (utile pe mobil) */
+        .form-group.show-error .error-text {
+            display: block;
+        }
 
-    /* mobile tweaks */
-    @media (max-width: 768px){
-      .form-group .form-control{ padding-right: 44px; }
-      .error-icon{ right: 25px; top: 45px; }
-      textarea + .error-icon,
-      .form-group textarea.form-control + .error-icon{ right: 8px; top: 45px; }
-    }
-   </style>
+        .form-group.show-error .form-control {
+            box-shadow: 0 0 0 3px rgba(255, 77, 79, 0.06) inset;
+        }
+
+        .invalid {
+            /* păstrează clasa pentru stil suplimentar */
+        }
+
+        .sending {
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        /* mobile tweaks */
+        @media (max-width: 768px) {
+            .form-group .form-control {
+                padding-right: 44px;
+            }
+
+            .error-icon {
+                right: 25px;
+                top: 45px;
+            }
+
+            textarea+.error-icon,
+            .form-group textarea.form-control+.error-icon {
+                right: 8px;
+                top: 45px;
+            }
+        }
+
+        /* Stilul pentru cerculețul cu semnul întrebării */
+        .help-badge {
+            display: inline-block;
+            position: relative;
+            width: 18px;
+            height: 18px;
+            background-color: #2250fc;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: bold;
+            cursor: help;
+        }
+
+        /* Stilul pentru mesajul care apare (tooltip) */
+        .help-badge .help-message {
+            visibility: hidden;
+            width: 200px;
+            background-color: #2250fc;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: normal;
+
+            /* Poziționare */
+            position: absolute;
+            z-index: 100;
+            bottom: 135%;
+            /* Îl ridică deasupra cercului */
+            left: 50%;
+            transform: translateX(-50%);
+            /* Îl centrează perfect */
+
+            /* Animație simplă */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Săgeata mică de sub mesaj */
+        .help-badge .help-message::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            /* La baza mesajului */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2250fc transparent transparent transparent;
+        }
+
+        /* Afișare la Hover */
+        .help-badge:hover .help-message {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -148,28 +234,41 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="m-t-30">
-                            <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form" method="post">
+                            <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form"
+                                method="post">
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label for="name">Nume</label>
-                                        <input type="text" aria-required="true" name="widget-contact-form-name" required class="form-control required name" placeholder="Introduceți numele">
+                                        <input type="text" aria-required="true" name="widget-contact-form-name" required
+                                            class="form-control required name" placeholder="Introduceți numele">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="email">Email</label>
-                                        <input type="email" aria-required="true" name="widget-contact-form-email" required class="form-control required email" placeholder="Introduceți adresa de email">
+                                        <label for="email">Email
+                                            <div class="help-badge">
+                                                ?
+                                                <span class="help-message">Exemplu: nume@gmail.com</span>
+                                            </div>
+                                        </label>
+                                        <input type="email" aria-required="true" name="widget-contact-form-email"
+                                            required class="form-control required email"
+                                            placeholder="Introduceți adresa de email">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-12">
                                         <label for="subject">Titlu</label>
-                                        <input type="text" name="widget-contact-form-subject" required class="form-control required" placeholder="Subiect ...">
+                                        <input type="text" name="widget-contact-form-subject" required
+                                            class="form-control required" placeholder="Subiect ...">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Mesaj</label>
-                                    <textarea type="text" name="widget-contact-form-message" required rows="5" class="form-control required" placeholder="Introduceți mesajul dumneavoastră"></textarea>
+                                    <textarea type="text" name="widget-contact-form-message" required rows="5"
+                                        class="form-control required"
+                                        placeholder="Introduceți mesajul dumneavoastră"></textarea>
                                 </div>
-                                <button class="btn" type="submit" id="form-submit"><i class="fa fa-paper-plane"></i>&nbsp;Trimite mesaj</button>
+                                <button class="btn" type="submit" id="form-submit"><i
+                                        class="fa fa-paper-plane"></i>&nbsp;Trimite mesaj</button>
                             </form>
                         </div>
                     </div>
@@ -297,124 +396,124 @@
     <script src="js/newfuture.js"></script>
 
     <script>
-      (function(){
-        const form = document.querySelector('.widget-contact-form');
-        if (!form) return;
-        const submitBtn = form.querySelector('#form-submit');
+        (function () {
+            const form = document.querySelector('.widget-contact-form');
+            if (!form) return;
+            const submitBtn = form.querySelector('#form-submit');
 
-        function makeIconFor(input, msg){
-          const wrapper = input.parentElement;
-          // icon
-          let icon = wrapper.querySelector('.error-icon');
-          if (!icon){
-            icon = document.createElement('button');
-            icon.type = 'button';
-            icon.className = 'error-icon';
-            icon.innerText = '!';
-            icon.setAttribute('aria-label', 'Afișează mesaj de eroare');
-            
-            // dacă e textarea, adaugă clasă specială
-            if (input.tagName === 'TEXTAREA') {
-              icon.classList.add('error-icon-textarea');
-            }
-            
-            wrapper.appendChild(icon);
-            icon.addEventListener('click', ()=> wrapper.classList.toggle('show-error'));
-          }
-          // text de eroare (sub câmp)
-          let text = wrapper.querySelector('.error-text');
-          if (!text){
-            text = document.createElement('div');
-            text.className = 'error-text';
-            text.setAttribute('role', 'alert');
-            wrapper.appendChild(text);
-          }
-          text.textContent = msg;
-          wrapper.classList.add('show-error');
-          input.classList.add('invalid');
+            function makeIconFor(input, msg) {
+                const wrapper = input.parentElement;
+                // icon
+                let icon = wrapper.querySelector('.error-icon');
+                if (!icon) {
+                    icon = document.createElement('button');
+                    icon.type = 'button';
+                    icon.className = 'error-icon';
+                    icon.innerText = '!';
+                    icon.setAttribute('aria-label', 'Afișează mesaj de eroare');
 
-          if (!text.id) text.id = 'err-' + Math.random().toString(36).slice(2,9);
-          input.setAttribute('aria-describedby', text.id);
-        }
+                    // dacă e textarea, adaugă clasă specială
+                    if (input.tagName === 'TEXTAREA') {
+                        icon.classList.add('error-icon-textarea');
+                    }
 
-        function removeIconFor(input){
-          const wrapper = input.parentElement;
-          const icon = wrapper.querySelector('.error-icon');
-          const text = wrapper.querySelector('.error-text');
-          if (icon) icon.remove();
-          if (text) text.remove();
-          wrapper.classList.remove('show-error');
-          input.classList.remove('invalid');
-          input.removeAttribute('aria-describedby');
-        }
-
- function validate(){
-          let valid = true;
-          const fields = form.querySelectorAll('.required');
-          fields.forEach(f => {
-            const v = (f.value || '').trim();
-            let errMsg = 'Introduceți Numele';
-            
-            if (!v){
-              if (f.type === 'email') errMsg = 'Introduceți o adresa de email';
-              else if (f.name === 'widget-contact-form-subject') errMsg = 'Introduceți subiectul';
-              else if (f.name === 'widget-contact-form-message') errMsg = 'Introduceți mesajul';
-              
-              makeIconFor(f, errMsg);
-              valid = false;
-            } else {
-              if (f.type === 'email'){
-                const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-                if (!ok){
-                  makeIconFor(f, 'Introduceți o adresă de email validă');
-                  valid = false;  // marchează ca invalid
-                } else {
-                  removeIconFor(f);  // dacă e valid, elimină iconița
+                    wrapper.appendChild(icon);
+                    icon.addEventListener('click', () => wrapper.classList.toggle('show-error'));
                 }
-              } else {
-                removeIconFor(f);  // pentru alte câmpuri, elimină eroare dacă sunt completate
-              }
+                // text de eroare (sub câmp)
+                let text = wrapper.querySelector('.error-text');
+                if (!text) {
+                    text = document.createElement('div');
+                    text.className = 'error-text';
+                    text.setAttribute('role', 'alert');
+                    wrapper.appendChild(text);
+                }
+                text.textContent = msg;
+                wrapper.classList.add('show-error');
+                input.classList.add('invalid');
+
+                if (!text.id) text.id = 'err-' + Math.random().toString(36).slice(2, 9);
+                input.setAttribute('aria-describedby', text.id);
             }
-          });
-          return valid;  // dacă valid = false, nu se declanșează sending
-        }
 
-        // curățare eroare la input (pe touch/typing)
-        form.addEventListener('input', (e)=>{
-          const t = e.target;
-          if (t.classList && t.classList.contains('required')) removeIconFor(t);
-        });
+            function removeIconFor(input) {
+                const wrapper = input.parentElement;
+                const icon = wrapper.querySelector('.error-icon');
+                const text = wrapper.querySelector('.error-text');
+                if (icon) icon.remove();
+                if (text) text.remove();
+                wrapper.classList.remove('show-error');
+                input.classList.remove('invalid');
+                input.removeAttribute('aria-describedby');
+            }
 
-        form.addEventListener('submit', function(ev){
-          ev.preventDefault();
-          if (!validate()) return;
+            function validate() {
+                let valid = true;
+                const fields = form.querySelectorAll('.required');
+                fields.forEach(f => {
+                    const v = (f.value || '').trim();
+                    let errMsg = 'Introduceți Numele';
 
-          // simulare trimitere: dezactivează butonul, afișează "Se trimite..." câteva secunde
-          submitBtn.disabled = true;
-          submitBtn.classList.add('sending');
-          const original = submitBtn.innerHTML;
-          submitBtn.innerHTML = '⏳ Trimitere...';
+                    if (!v) {
+                        if (f.type === 'email') errMsg = 'Introduceți o adresa de email';
+                        else if (f.name === 'widget-contact-form-subject') errMsg = 'Introduceți subiectul';
+                        else if (f.name === 'widget-contact-form-message') errMsg = 'Introduceți mesajul';
 
-          // simulare cerere (2.5s)
-          setTimeout(()=>{
-            // resetează formularul (șterge toate câmpurile)
-            form.reset();
+                        makeIconFor(f, errMsg);
+                        valid = false;
+                    } else {
+                        if (f.type === 'email') {
+                            const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+                            if (!ok) {
+                                makeIconFor(f, 'Introduceți o adresă de email validă');
+                                valid = false;  // marchează ca invalid
+                            } else {
+                                removeIconFor(f);  // dacă e valid, elimină iconița
+                            }
+                        } else {
+                            removeIconFor(f);  // pentru alte câmpuri, elimină eroare dacă sunt completate
+                        }
+                    }
+                });
+                return valid;  // dacă valid = false, nu se declanșează sending
+            }
 
-            // elimină iconițele și mesajele de eroare
-            form.querySelectorAll('.error-icon, .error-text').forEach(n => n.remove());
-            form.querySelectorAll('.form-group').forEach(g => g.classList.remove('show-error'));
-            form.querySelectorAll('.required').forEach(i => { i.classList.remove('invalid'); i.removeAttribute('aria-describedby'); });
+            // curățare eroare la input (pe touch/typing)
+            form.addEventListener('input', (e) => {
+                const t = e.target;
+                if (t.classList && t.classList.contains('required')) removeIconFor(t);
+            });
 
-            // afișare scurtă stare de succes și revenire la textul original
-            submitBtn.innerHTML = '✔ Mesaj trimis';
-            submitBtn.classList.remove('sending');
-            submitBtn.disabled = false;
+            form.addEventListener('submit', function (ev) {
+                ev.preventDefault();
+                if (!validate()) return;
 
-            // readuce textul butonului după 2s
-            setTimeout(()=> { submitBtn.innerHTML = original; }, 2000);
-          }, 2500);
-        });
-      })();
+                // simulare trimitere: dezactivează butonul, afișează "Se trimite..." câteva secunde
+                submitBtn.disabled = true;
+                submitBtn.classList.add('sending');
+                const original = submitBtn.innerHTML;
+                submitBtn.innerHTML = '⏳ Trimitere...';
+
+                // simulare cerere (2.5s)
+                setTimeout(() => {
+                    // resetează formularul (șterge toate câmpurile)
+                    form.reset();
+
+                    // elimină iconițele și mesajele de eroare
+                    form.querySelectorAll('.error-icon, .error-text').forEach(n => n.remove());
+                    form.querySelectorAll('.form-group').forEach(g => g.classList.remove('show-error'));
+                    form.querySelectorAll('.required').forEach(i => { i.classList.remove('invalid'); i.removeAttribute('aria-describedby'); });
+
+                    // afișare scurtă stare de succes și revenire la textul original
+                    submitBtn.innerHTML = '✔ Mesaj trimis';
+                    submitBtn.classList.remove('sending');
+                    submitBtn.disabled = false;
+
+                    // readuce textul butonului după 2s
+                    setTimeout(() => { submitBtn.innerHTML = original; }, 2000);
+                }, 2500);
+            });
+        })();
     </script>
 </body>
 
